@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sweets App</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <header class="wrap-container">
+    <div class="container">
+      <a href="#">
+        <img class="epark-logo" src="image/logo.png">
+      </a>
+      <div class="right-header">
+        <ul class="epark-right-menu">
+          <li><a href="#"><button></button></a></li>
+          <li><a href="#"><button></button></a></li>
+        </ul>  
+      </div>
+    </div>
+  </header>
+  <section class="wrap-container">
+    <div class="container">
+      <span class="back-arrow"></span><a href="#" class="back-href">back</a>
+      <h1>会員情報の変更</h1>
+      <div class="title-head">
+        <h1>会員情報</h1>
+        <button class="pancil"><span>編集</span></button>
+      </div>
+      <div class="info-detail">
+        <div class="name-register">
+          <p class="title-p">お名前</p>
+          <div class="head-name-register">
+            <div class="detail-name">
+              <span>姓</span><br>
+              <input type="text" name="" class="input-name">
+            </div>
+            <div class="detail-name">
+              <span>名</span><br>
+              <input type="text" name="">
+            </div>
+          </div>
+          <div class="head-name-register">
+            <div class="detail-name">
+              <span>セイ</span><br>
+              <input type="text" name="">
+            </div>
+            <div class="detail-name">
+              <span>メイ</span><br>
+              <input type="text" name="">
+            </div>
+          </div>
+        </div>
+        <div class="nickname-class">
+          <p class="title-p">ニックネーム</p>   
+          <div class="round-radio green-radio">
+            <input type="radio" name="name" id="name1"><label for="name1">お名前を使用する</label>
+            <div class="check" for="name1"></div>
+          </div>
+          <div class="round-radio green-radio">
+            <input type="radio" name="name" id="name2" checked><label for="name2">お名前を使用しない（ニックネームを指定する）</label>
+            <div class="check"></div>
+          </div>  
+          <label>ニックネーム</label>
+          <input type="text" name="">
+        </div>
+        <div class="birth-day">
+          <p class="title-p">生年月日</p>
+          <div class='input-group date' id='datepicker'>
+            <input type='text' class="form-control" placeholder="1974/03/10" />
+            <span class="input-group-addon">
+            </span>
+          </div>
+        </div>
+        <div class="gender-info">
+          <p class="title-p">性別</p>
+          <div class="round-radio-short green-radio">
+            <input type="radio" name="gender" id="gender1"><label for="gender1">男性</label>
+            <div class="check"></div>
+          </div>
+          <div class="round-radio-short green-radio">
+            <input type="radio" name="gender" id="gender2" checked><label for="gender2">女性</label>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <p class="title-p">連絡先登録</p>
+          <div class="round-radio green-radio">
+            <input type="radio" name="contact" id="contact1"><label for="contact1">自宅</label>
+            <div class="check"></div>
+          </div>
+          <div class="round-radio green-radio">
+            <input type="radio" name="contact" id="contact2" checked><label for="contact2">勤務先 </label>
+            <div class="check"></div>
+          </div>
+          <div class="round-radio green-radio">
+            <input type="radio" name="contact" id="contact3"><label for="contact3">その他</label>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="post-code">
+          <p class="title-p">郵便番号</p>
+          <input type="text" name=""><span>ー</span><input type="text" name="">
+          <button>住所検索</button>
+          <p>郵便番号からご住所を自動入力できます。</p>
+        </div>
+        <div class="address-info">
+          <p class="title-p">ご住所</p>
+          <div class="add-info-row">
+            <label>都道府県</label>
+            <select>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+          <div class="add-info-row">
+            <label>市区郡</label>
+            <input type="text" name="">
+          </div>
+          <div class="add-info-row">
+            <label>町村字番地</label>
+            <input type="text" name="">
+          </div>
+          <div class="add-info-row">
+            <label>建物名</label>
+            <input type="text" name="">
+          </div>
+        </div>
+        <div class="phone-info">
+          <p class="title-p">電話番号</p>
+          <input type="text" name="">
+          <span>半角数字（ハイフンなし） </span>
+        </div>
+        <div class="suite-guide-info">
+          <p class="title-p">スイーツガイドを何でお知りになりましたか？</p>
+          <div class="round-checkbox">
+            <input type="checkbox" name="" id="checkbox1" ><label for="checkbox1">インターネット</label>
+            <div class="tick-checkbox"></div>
+          </div>
+          <div class="round-checkbox">
+            <input type="checkbox" name="" id="checkbox2" checked><label for="checkbox2">クチコミ</label>
+            <div class="tick-checkbox"></div>
+          </div>
+          <div class="round-checkbox">
+            <input type="checkbox" name="" id="checkbox3"><label for="checkbox3">雑誌（ブランドJOY）</label>
+            <div class="tick-checkbox"></div>
+          </div>
+          <div class="round-checkbox">
+            <input type="checkbox" name="" id="checkbox4"><label for="checkbox4">店舗</label>
+            <div class="tick-checkbox"></div>
+          </div>
+          <div class="round-checkbox">
+            <input type="checkbox" name="" id="checkbox5"><label for="checkbox5">その他</label>
+            <div class="tick-checkbox"></div>
+          </div>
+          <div class="round-checkbox">
+            <input type="checkbox" name="" id="checkbox6"><label for="checkbox6">SNS</label>
+            <div class="tick-checkbox"></div>
+          </div>
+        </div>
+        <div class="receive-mail-info">
+          <p class="title-p">メール受信配信</p>
+          <div class="round-radio-short green-radio">
+            <input type="radio" name="mail" id="mail1"><label for="mail1">受け取る</label>
+            <div class="check"></div>
+          </div>
+          <div class="round-radio-short green-radio">
+            <input type="radio" name="mail" id="mail2" checked><label for="mail2">受け取らない</label>
+            <div class="check"></div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-register">
+        <button>戻る</button>
+        <button>会員情報を変更する</button>
+      </div>
+    </div>
+  </section>      
+  <footer class="wrap-container">
+    <p>E-PARKスイーツガイド > お問い合わせ</p>
+    <div class="line"></div>
+    <div class="bottom-footer">  
+      <div class="container">
+        <div class="row-href">
+          <a href="#">EPARK</a>
+          <a href="#">グループサイト一覧</a>
+          <a href="#">運営会社</a>
+        </div>
+        <div class="row-href">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">会員規約</a>
+          <a href="#">利用規約</a>
+        </div>
+        <div class="btn-register-top">
+          <button>掲載ご希望のスイーツ店様はこちら</button>
+          <span>(c) 2007-2016 EPARK sweets, Inc.</span>  
+        </div>  
+        
+      </div>      
+    </div>
+    <div id="to-top">
+      <span>page top</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="js/moment.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/master/src/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
