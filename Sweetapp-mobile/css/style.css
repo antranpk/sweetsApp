@@ -275,6 +275,7 @@ section div.title-head {
       margin-bottom: 46px; }
 
 footer {
+  height: 360px;
   position: relative;
   border-top: 2px solid #c3000b; }
   footer p {
