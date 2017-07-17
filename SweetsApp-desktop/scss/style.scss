@@ -26,7 +26,6 @@ body {
 header {
   border-top: solid 10px rgb(199,0,11);
   background: url("../image/background.png") no-repeat;
-  /*background-size: 200px 80px;*/
   background-position: 100px 0;
   margin-bottom: 14px;
   img {
@@ -65,9 +64,11 @@ header {
       width: 50px;
       height: 32px;
       padding: 11px;
-      @include border-radius(8px);
+      padding-top: 21px;
+      @include border-radius(6px);
       border: none;
       background: rgb(203,20,26) url("../image/search-icon.png") center no-repeat;
+      -moz-background: rgb(203,20,26) url("../image/search-icon.png") center no-repeat;;
     }
   }
   ul {
@@ -254,7 +255,7 @@ section {
       };
       &:nth-of-type(3) label {
         margin-left: 30px;
-        &:nth-child(1) ~ input[type="text"] {
+        &:nth-of-type(1) ~ input[type="text"] {
           width: 194px;
           padding-left: 5px;
           &:not(:nth-of-type(2)) {
@@ -264,8 +265,11 @@ section {
         &:nth-of-type(2) ~ input[type="text"]{
           padding-left: 5px;
           width: 194px;
-          &:not(:nth-of-type(2)) {
-            margin: 18px 0px 0 16px;            
+          &:not(:nth-of-type(4)) {
+            margin: 18px 0 0 31px;            
+          };
+          &:nth-of-type(4){
+            margin-left: 16px;
           };
         };
         &:nth-of-type(3) {
@@ -385,6 +389,8 @@ section {
         }
         select {
           -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           background: url("../image/arrow.png") no-repeat right; 
           background-position: 510px 10px; 
           width: 530px;
