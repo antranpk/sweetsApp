@@ -4,10 +4,11 @@
   <title>Sweets App</title>
   <!-- Latest compiled and minified CSS -->
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css" />
-  <link rel="stylesheet" type="text/css" href="normallize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -18,20 +19,22 @@
       </a>
       <p>このサイトのキャッチコピーが入りますああああああああああああ</p>
       <div class="right-header">
-        <div class="epark-search-top">
-          <input type="text" name="" placeholder="店名・商品名で検索">
-          <button class="btn-search"></button>
-        </div>
+        <form>
+          <div class="form-group epark-search-top">
+            <input type="email" class="form-control" id="email" placeholder="店名・商品名で検索">
+          </div>
+          <button type="submit" class="btn btn-default btn-search"></button>
+        </form>
         <ul class="epark-right-menu">
           <li><a href="#"><span class="login">ログイン</a></span></li>
-          <li><a href="#"><span class="plug">新規登録</span></a></li>
+          <li><a href="#"><span class="plus">新規登録</span></a></li>
         </ul>  
       </div>
     </div>
   </header>
   <section class="wrap-container">
     <div class="container">
-      <ul>
+      <ul class="epark-href">
         <li><a href="#">EPARKスイーツガイド</a></li>
         <li><a href="#">マイページ</a></li>
         <li><a href="#">会員情報</a></li>
@@ -39,15 +42,15 @@
       </ul>
       <div class="epark-content">
         <h1 class="border-bottom-dotted">会員情報の変更</h1>
-        <p class="border-bottom-dotted spark-input">変更内容の入力<span>※</span><span>の項目は必ず入力してください。</span></p>
+        <p class="spark-info-form">変更内容の入力<span>※</span><span>の項目は必ず入力してください。</span></p>
         <form name="update-info-member">
           <div class="epark-form-content">
             <table class="epark-table">
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <th>EPARK会員連携</th>
                 <th>てログイン済</th>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>会員ID <span>※</span></td>
                 <td>
                   <input type="radio" name="member-id" id="member-1"><label for="member-1" class="radio-green">メールアドレスを使用する</label><br>
@@ -56,7 +59,7 @@
                   <div class="alert alert-danger alert-email"></div>
                 </td> 
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>お名前</td>
                 <td>
                   <label>お名前</label>
@@ -72,9 +75,9 @@
                   <label class="radio-green" for="nickname2">お名前を使用しない（ニックネームを指定する）</label>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
-                <td>生年月日</td>
-                <td>
+              <tr class="border-bottom-dotted birth-day">
+                <td class="col-date-time">生年月日</td>
+                <td class="col-date-time">
                   <div class='input-group date' id='datepicker'>
                     <input type='text' class="form-control" placeholder="1974/03/10" />
                     <span class="input-group-addon">
@@ -83,14 +86,14 @@
                   </div>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>性別</td>
                 <td>
                   <input type="radio" name="gender" id="gender1"><label for="gender1" class="radio-green" checked>男性</label>
                   <input type="radio" name="gender" id="gender2"><label for="gender2" class="radio-green">女性</label>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>連絡先登録名</td>
                 <td>
                   <input type="radio" name="contact-name" id="contact-name1" checked><label class="radio-green" for="contact-name1">自宅</label>
@@ -98,7 +101,7 @@
                   <input type="radio" name="contact-name" id="contact-name3"><label class="radio-green" for="contact-name3">その他</label>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>郵便番号</td>
                 <td>
                   <input type="text" name="" class="num-code1"><span>ー</span>
@@ -108,7 +111,7 @@
                   <div class="alert alert-danger alert-code">Code is invalid!!!</div>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>都道府県</td>
                 <td>
                   <span></span>
@@ -120,25 +123,25 @@
                   </select>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>市区郡</td>
                 <td>
                   <input type="text" class="input-type" name="city-or-country" placeholder="市区郡">
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>町村字番地</td>
                 <td>
                   <input type="text" name="" class="input-type" placeholder="町村字番地">
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>建物名</td>
                 <td>
                   <input type="text" name="" class="input-type" placeholder="建物名">
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>電話番号</td>
                 <td>
                   <input type="text" class="input-type phone-number" placeholder="090-0000-0000" name="phone-number"><br>
@@ -146,7 +149,7 @@
                   <div class="alert alert-danger alert-phone">Phone Number invalid!!!</div>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>会員登録前アンケート</td>
                 <td>
                   <p>スイーツガイドを何で知りましたか？</p>
@@ -162,7 +165,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="border-bottom-dotted">
+              <tr class="border-bottom-dotted tb-col">
                 <td>メール情報配信</td>
                 <td>
                   <input type="radio" name="mail-info-delivery" id="mail1" checked><label for="mail1" class="radio-green">受け取る</label>

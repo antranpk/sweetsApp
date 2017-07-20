@@ -10,8 +10,12 @@ a {
   text-decoration: none;
 }
 body {
-  font: HiraKakuProN;
+  font-family: HiraKakuProN;
   background-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 .border-brown {
   border: 1px solid rgb(194,173,163);
@@ -25,62 +29,70 @@ body {
 }
 header {
   border-top: solid 10px rgb(199,0,11);
-  background: url("../image/background.png") no-repeat;
-  background-position: 100px 0;
-  margin-bottom: 14px;
-  img {
-    width: 100px;
-    height: 50px;
-    margin-top: 16px;
+  img.epark-logo {
+    margin-top: 20px;
+    margin-left: 9px;
+  }
+  div.container {
+    background: url("../image/background.png") no-repeat;
+    height: 80px;
+    border-bottom: 1px solid #ddcfc8;
   }
   p {
     font-size: 11px;
     margin-top: 14px;
     float: right;
+    margin-right: 11px;
   }
   .right-header {
-    width: 680px;
-    height: 34px;
-    margin-top: -26px;
+    width: 675px;
+    margin-top: -24px;
     float: right;
+    margin-right: 11px;
+    form {
+      display: inline-block;
+      margin-right: 10px;
+    }
   }
   .epark-search-top {
-    width: 456px;
     float: left;
-    /*margin-top: 34px;*/
+    margin-bottom: 0;
     input {
       @extend .border-brown;
-      width: 398px;
-      height: 32px;
-      @include border-radius(5px);
+      width: 400px;
+      height: 34px;
+      @include border-radius(6px);
       &[placeholder] {
-        padding-left: 5px;
-        color: rgb(160,160,160);
+        padding-left: 10px;
+        color: #909090;
         font-size: 14px;
       }
+      margin-right: 5px;
     }
-    .btn-search {
+    
+  }
+  button.btn-search {
       display: inline-block;
       width: 50px;
-      height: 32px;
+      height: 34px;
       padding: 11px;
       padding-top: 21px;
       @include border-radius(6px);
       border: none;
       background: rgb(203,20,26) url("../image/search-icon.png") center no-repeat;
-      -moz-background: rgb(203,20,26) url("../image/search-icon.png") center no-repeat;;
+      -moz-background: rgb(203,20,26) url("../image/search-icon.png") center no-repeat;
+      background-color: red;
     }
-  }
   ul {
     list-style-type: none;
     float: right;
-    padding-left: 18px; 
+    padding-left: 0; 
     margin-bottom: 0;
     li {
       display: inline-block;
-      width: 94px;
-      height: 32px;
-      line-height: 32px;
+      width: 95px;
+      height: 34px;
+      line-height: 36px;
       background-color: $green-color;
       text-align: right;
       padding-right: 5px;
@@ -93,13 +105,16 @@ header {
         display: inline-block;
         position: relative;
         color: #fff;
+        font-size: 13px;
+        font-weight: bold;
         &.login:before{
           content: url("../image/login.png");
           position: absolute;
           left: -26px;
+          top: 2px;
           line-height: 40px;
         };
-        &.plug:before {
+        &.plus:before {
           content: "\f067";
           font-family: FontAwesome;
           display: inline-block;
@@ -107,7 +122,7 @@ header {
           line-height: 17px;
           position: absolute;
           left: -26px;
-          top: 6px;
+          top: 8px;
           @include border-radius(50%);
           border: 2px solid #fff;
           width: 20px;
@@ -118,10 +133,11 @@ header {
   }
 }
 section {
-  padding-top: 14px;
-  ul {
+  padding-top: 20px;
+  ul.epark-href {
     list-style: none;
     padding-left: 0px;
+    margin-bottom: 4px;
     li {
       display: inline-block;
       a {
@@ -151,10 +167,23 @@ section {
     .border-bottom-dotted {
       border-bottom: 1px dotted rgb(153,153,153);
     };
+    h1.border-bottom-dotted {
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-bottom: 7px;
+      color: #000;
+      font-weight: bold;
+    }
+    p.spark-info-form {
+      padding-top: 24px;
+      padding-bottom: 7px;
+      margin: 0;
+    }
     table.epark-table {
       width: 930px;
     }
-    .spark-input {
+    .spark-info-form {
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 0;
@@ -167,21 +196,52 @@ section {
         font-size: 11px;        
       }
     }
-    tr {
+    tr.birth-day {
+      td.col-date-time {
+          padding-top: 16px;
+          padding-bottom: 16px;
+          div.input-group {
+            width: 608px;
+          }
+        }
+        td.col-date-time:first-child {
+          height: 60px;
+          background-color: #f3efe9;
+          padding-left: 12px;
+        }
+        span.glyphicon-calendar:before {
+          content: url("../image/calendar.png");
+        }
+        input[type="text"] {
+          margin-left: 29px;
+          width: 529px;
+          @include border-radius(4px);
+          & + span {
+            background-color: #f3efe9;
+            @include border-radius(5px);
+            border: 2px solid #dfd2c3;
+          }
+          & ~ span.input-group-addon {
+            background-color: #f3efe9 !important;
+            @include border-radius(5px);
+            border: 2px solid #dfd2c3 !important;
+          } 
+        }
+    }
+    tr.tb-col {
       color: #444;
+      th {
+        font-weight: normal;
+      }
       th:first-child{
         width: 230px;
         background-color: rgb(243,239,233);
-        padding:24px 0 24px 12px;  
+        padding:22px 0 22px 12px;  
       };
       th:last-child {
-        padding: 24px 0 24px 30px;
+        padding: 22px 0 22px 30px;
       };
-      td:first-child {
-        width: 230px;
-        background-color: rgb(243,239,233);
-        padding-left: 12px;
-      }
+     
       td {
         input[type="radio"] {
           display: none;
@@ -193,8 +253,8 @@ section {
           }
           &[type="text"] {
             border: 1px solid #c2ada3;
-            @include border-radius(3px);
-            height: 32px;
+            @include border-radius(4px);
+            height: 34px;
           }
         }
         label {
@@ -244,77 +304,69 @@ section {
           background-color: $green-color;
         }
       }
+      td:first-child {
+        width: 230px;
+        background-color: rgb(243,239,233);
+        padding-left: 12px;
+        
+      }
+      &:nth-of-type(1) {
+        border-top: 1px dotted #928f8c;
+      };
       &:nth-of-type(2) {
         input[type="text"] {
-        margin: 5px 0 22px 30px;
-        padding-left: 5px;
-        width: 526px;}
+        margin: 5px 0 18px 29px;
+        padding-left: 10px;
+        width: 529px;}
         span {
           color: red;
         }
-      };
-      &:nth-of-type(3) label {
-        margin-left: 30px;
-        &:nth-of-type(1) ~ input[type="text"] {
-          width: 194px;
-          padding-left: 5px;
-          &:not(:nth-of-type(2)) {
-            margin: 12px 16px 0 72px;
-          }
+        td:first-child {
+          padding-top: 22px;
+          padding-bottom: 95px;
         }
-        &:nth-of-type(2) ~ input[type="text"]{
-          padding-left: 5px;
-          width: 194px;
-          &:not(:nth-of-type(4)) {
-            margin: 18px 0 0 31px;            
-          };
-          &:nth-of-type(4){
-            margin-left: 16px;
-          };
+      };
+      &:nth-of-type(3)  {
+        td:first-child{
+          padding-top: 22px;
+          padding-bottom: 120px;
         };
-        &:nth-of-type(3) {
-          margin-top: 28px;
-          margin-bottom: 14px;
-        }
-        &:nth-of-type(4) {
-          margin-left: 58px;
-        }
-        &:nth-of-type(5) {
-          margin-left: 64px;
-        }
-      }
-      &:nth-of-type(4) {
-        td {
-          padding-top: 16px;
-          padding-bottom: 16px;
-          div.input-group {
-            width: 608px;
-          }
-        }
-        span.glyphicon-calendar:before {
-          content: url("../image/calendar.png");
-        }
-        input[type="text"] {
+        label {
           margin-left: 28px;
-          width: 528px;
-          @include border-radius(3px);
-          & + span {
-            background-color: #f3efe9;
-            @include border-radius(5px);
-            border: 2px solid #dfd2c3;
+          &:nth-of-type(1) ~ input[type="text"] {
+            width: 200px;
+            padding-left: 10px;
+            &:not(:nth-of-type(2)) {
+              margin: 12px 20px 0 62px;
+            }
           }
-          & ~ span.input-group-addon {
-            background-color: #f3efe9 !important;
-            @include border-radius(5px);
-            border: 2px solid #dfd2c3 !important;
-          } 
+          &:nth-of-type(2) ~ input[type="text"]{
+            padding-left: 10px;
+            width: 200px;
+            &:not(:nth-of-type(4)) {
+              margin: 20px 0 0 21px;            
+            };
+            &:nth-of-type(4){
+              margin-left: 20px;
+            };
+          };
+          &:nth-of-type(3) {
+            margin-top: 24px;
+            margin-bottom: 14px;
+          }
+          &:nth-of-type(4) {
+            margin-left: 58px;
+          }
+          &:nth-of-type(5) {
+            margin-left: 64px;
+          }
         }
-      };
+      }  
       &:nth-of-type(5) {
         label {
-          margin-left: 60px;
+          margin-left: 57px;
           &:nth-of-type(2) {
-            margin-left: 80px;
+            margin-left: 94px;
           };  
         }
         td:first-child {
@@ -328,9 +380,9 @@ section {
           padding-bottom: 20px;
         };
         label {
-          margin-left: 60px;
+          margin-left: 57px;
           &:nth-of-type(2) {
-            margin-left: 80px;
+            margin-left: 94px;
           };
           &:nth-of-type(3) {
             margin-left: 70px;
@@ -343,9 +395,10 @@ section {
           padding-bottom: 40px;
         };
         input[type="text"]{
-          width: 80px;
+          width: 90px;
+          height: 34px;
           &:first-child {
-            margin-left: 30px;
+            margin-left: 29px;
             & + span {
               margin-left: 8px;
               margin-right: 8px;
@@ -354,6 +407,8 @@ section {
           }
         }
         button.btn-search-address {
+          height: 34px;
+          width: 120px;
           margin-left: 38px;
           background-color: #f3efe9;
           border: 2px solid #e4dbce;
@@ -383,9 +438,6 @@ section {
         };
         td:last-child {
           position: relative;
-          span:after {
-            
-          }
         }
         select {
           -webkit-appearance: none;
@@ -393,8 +445,8 @@ section {
           appearance: none;
           background: url("../image/arrow.png") no-repeat right; 
           background-position: 510px 10px; 
-          width: 530px;
-          height: 32px;
+          width: 531px;
+          height: 34px;
           margin: 10px 0 10px 28px;
           border: 1px solid #c2ada3;
           @include border-radius(3px);
@@ -404,16 +456,22 @@ section {
       };
       .input-type {
         margin: 12px 0 12px 28px;
-        width: 530px;
+        width: 531px;
+        height: 34px;
         padding-left: 10px;
       }
       &:nth-last-of-type(3) {
+        td:first-child {
+          padding-top: 22px;
+          padding-bottom: 42px;
+        };
         input[type="text"] {
-          margin: 10px 0 10px 28px;
+          padding: 12px 0 8px 28px;
         };
         p {
           margin-left: 28px;
-          margin-bottom: 12px;
+          padding-bottom: 10px;
+          margin-bottom: 0;
         }
         span:nth-of-type(1) {
           margin-left: 6px;
@@ -426,6 +484,10 @@ section {
       &:nth-last-of-type(2) {
         td {
           padding-top: 24px;
+        }
+        td:first-child {
+          padding-top: 22px;
+          padding-bottom: 114px;
         }
         td:last-child {
           padding-left: 58px;
@@ -449,7 +511,7 @@ section {
       };
       &:nth-last-of-type(1) {
         td {
-          padding-top: 18px;
+          padding-top: 21px;
           padding-bottom: 18px;
         }
         label {
@@ -462,10 +524,13 @@ section {
 div.alert-bottom {
   background-color: #ffe9ea;
   margin-top: 22px;
+  height: 30px;
   p {
     color: #cb141a;
     font-weight: bold;
-    padding: 5px 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 2px;
   }
 }
 div.spark-btn-update {
@@ -475,19 +540,21 @@ div.spark-btn-update {
   margin-bottom: 58px;
   button {
     width: 280px;
-    height: 42px;
+    height: 50px;
     font-weight: bold;
+    line-height: 50px;
     @include border-radius(5px);
     &:first-child {
       background-color: #f3efe9;
       border: 2px solid #e4dbce;
       color: #936945;
-      margin-right: 17px;
+      margin-right: 10px;
     };
     &:last-child {
       background-color: #e0f2b6;
       border: 2px solid #b4d46e;
       color: #637c30;
+
     };
   };
 }
@@ -562,12 +629,13 @@ footer{
   span {
     text-transform: uppercase;
     font-family: arial;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     position: absolute;
-    top: 33px;
-    margin-left: -1px;
+    top: 35px;
+    margin-left: 10px;
     font-weight: bold;
+    letter-spacing: -1px;
   }
 }
 .alert{
@@ -575,4 +643,14 @@ footer{
   margin-left: 30px;
   display: none;
 }
-
+.ui-datepicker { 
+  margin-left: 100px;
+  z-index: 1000;
+}
+.ui-datepicker-trigger { 
+margin-top:7px;
+  margin-left: -30px;
+  margin-bottom:0px;
+  position:absolute;
+  z-index:1000;
+}

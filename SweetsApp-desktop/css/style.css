@@ -3,8 +3,12 @@ a {
   text-decoration: none; }
 
 body {
-  font: HiraKakuProN;
+  font-family: HiraKakuProN;
   background-color: #fff; }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 .border-brown, header .epark-search-top input {
   border: 1px solid #c2ada3; }
@@ -17,61 +21,66 @@ body {
   width: 960px; }
 
 header {
-  border-top: solid 10px #c7000b;
-  background: url("../image/background.png") no-repeat;
-  background-position: 100px 0;
-  margin-bottom: 14px; }
-  header img {
-    width: 100px;
-    height: 50px;
-    margin-top: 16px; }
+  border-top: solid 10px #c7000b; }
+  header img.epark-logo {
+    margin-top: 20px;
+    margin-left: 9px; }
+  header div.container {
+    background: url("../image/background.png") no-repeat;
+    height: 80px;
+    border-bottom: 1px solid #ddcfc8; }
   header p {
     font-size: 11px;
     margin-top: 14px;
-    float: right; }
+    float: right;
+    margin-right: 11px; }
   header .right-header {
-    width: 680px;
-    height: 34px;
-    margin-top: -26px;
-    float: right; }
-  header .epark-search-top {
-    width: 456px;
-    float: left;
-    /*margin-top: 34px;*/ }
-    header .epark-search-top input {
-      width: 398px;
-      height: 32px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      border-radius: 5px; }
-      header .epark-search-top input[placeholder] {
-        padding-left: 5px;
-        color: #a0a0a0;
-        font-size: 14px; }
-    header .epark-search-top .btn-search {
+    width: 675px;
+    margin-top: -24px;
+    float: right;
+    margin-right: 11px; }
+    header .right-header form {
       display: inline-block;
-      width: 50px;
-      height: 32px;
-      padding: 11px;
-      padding-top: 21px;
+      margin-right: 10px; }
+  header .epark-search-top {
+    float: left;
+    margin-bottom: 0; }
+    header .epark-search-top input {
+      width: 400px;
+      height: 34px;
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       -ms-border-radius: 6px;
       border-radius: 6px;
-      border: none;
-      background: #cb141a url("../image/search-icon.png") center no-repeat;
-      -moz-background: #cb141a url("../image/search-icon.png") center no-repeat; }
+      margin-right: 5px; }
+      header .epark-search-top input[placeholder] {
+        padding-left: 10px;
+        color: #909090;
+        font-size: 14px; }
+  header button.btn-search {
+    display: inline-block;
+    width: 50px;
+    height: 34px;
+    padding: 11px;
+    padding-top: 21px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    border: none;
+    background: #cb141a url("../image/search-icon.png") center no-repeat;
+    -moz-background: #cb141a url("../image/search-icon.png") center no-repeat;
+    background-color: red; }
   header ul {
     list-style-type: none;
     float: right;
-    padding-left: 18px;
+    padding-left: 0;
     margin-bottom: 0; }
     header ul li {
       display: inline-block;
-      width: 94px;
-      height: 32px;
-      line-height: 32px;
+      width: 95px;
+      height: 34px;
+      line-height: 36px;
       background-color: #8ec21f;
       text-align: right;
       padding-right: 5px;
@@ -85,13 +94,16 @@ header {
       header ul li span {
         display: inline-block;
         position: relative;
-        color: #fff; }
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold; }
         header ul li span.login:before {
           content: url("../image/login.png");
           position: absolute;
           left: -26px;
+          top: 2px;
           line-height: 40px; }
-        header ul li span.plug:before {
+        header ul li span.plus:before {
           content: "\f067";
           font-family: FontAwesome;
           display: inline-block;
@@ -99,7 +111,7 @@ header {
           line-height: 17px;
           position: absolute;
           left: -26px;
-          top: 6px;
+          top: 8px;
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
@@ -109,78 +121,120 @@ header {
           height: 20px; }
 
 section {
-  padding-top: 14px; }
-  section ul {
+  padding-top: 20px; }
+  section ul.epark-href {
     list-style: none;
-    padding-left: 0px; }
-    section ul li {
+    padding-left: 0px;
+    margin-bottom: 4px; }
+    section ul.epark-href li {
       display: inline-block; }
-      section ul li a {
+      section ul.epark-href li a {
         display: inline-block;
         color: #c0ab9b; }
-      section ul li a:hover {
+      section ul.epark-href li a:hover {
         text-decoration: none;
         color: #cabfc3; }
-      section ul li:after {
+      section ul.epark-href li:after {
         content: ">";
         color: #7a7a7a; }
-      section ul li:last-child a {
+      section ul.epark-href li:last-child a {
         color: #7a7a7a; }
-      section ul li:last-child:after {
+      section ul.epark-href li:last-child:after {
         content: ''; }
   section .epark-content {
     border-top: 2px solid #444444; }
     section .epark-content .border-bottom-dotted {
       border-bottom: 1px dotted #999999; }
+    section .epark-content h1.border-bottom-dotted {
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-bottom: 7px;
+      color: #000;
+      font-weight: bold; }
+    section .epark-content p.spark-info-form {
+      padding-top: 24px;
+      padding-bottom: 7px;
+      margin: 0; }
     section .epark-content table.epark-table {
       width: 930px; }
-    section .epark-content .spark-input {
+    section .epark-content .spark-info-form {
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 0; }
-      section .epark-content .spark-input span:first-child {
+      section .epark-content .spark-info-form span:first-child {
         color: red;
         padding-left: 16px; }
-      section .epark-content .spark-input span:last-child {
+      section .epark-content .spark-info-form span:last-child {
         color: #747474;
         font-size: 11px; }
-    section .epark-content tr {
+    section .epark-content tr.birth-day td.col-date-time {
+      padding-top: 16px;
+      padding-bottom: 16px; }
+      section .epark-content tr.birth-day td.col-date-time div.input-group {
+        width: 608px; }
+    section .epark-content tr.birth-day td.col-date-time:first-child {
+      height: 60px;
+      background-color: #f3efe9;
+      padding-left: 12px; }
+    section .epark-content tr.birth-day span.glyphicon-calendar:before {
+      content: url("../image/calendar.png"); }
+    section .epark-content tr.birth-day input[type="text"] {
+      margin-left: 29px;
+      width: 529px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+      section .epark-content tr.birth-day input[type="text"] + span {
+        background-color: #f3efe9;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        border: 2px solid #dfd2c3; }
+      section .epark-content tr.birth-day input[type="text"] ~ span.input-group-addon {
+        background-color: #f3efe9 !important;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        border: 2px solid #dfd2c3 !important; }
+    section .epark-content tr.tb-col {
       color: #444; }
-      section .epark-content tr th:first-child {
+      section .epark-content tr.tb-col th {
+        font-weight: normal; }
+      section .epark-content tr.tb-col th:first-child {
         width: 230px;
         background-color: #f3efe9;
-        padding: 24px 0 24px 12px; }
-      section .epark-content tr th:last-child {
-        padding: 24px 0 24px 30px; }
-      section .epark-content tr td:first-child {
-        width: 230px;
-        background-color: #f3efe9;
-        padding-left: 12px; }
-      section .epark-content tr td input[type="radio"] {
+        padding: 22px 0 22px 12px; }
+      section .epark-content tr.tb-col th:last-child {
+        padding: 22px 0 22px 30px; }
+      section .epark-content tr.tb-col td input[type="radio"] {
         display: none; }
-      section .epark-content tr td input {
+      section .epark-content tr.tb-col td input {
         margin: 0; }
-        section .epark-content tr td input[type="checkbox"] {
+        section .epark-content tr.tb-col td input[type="checkbox"] {
           display: none; }
-        section .epark-content tr td input[type="text"] {
+        section .epark-content tr.tb-col td input[type="text"] {
           border: 1px solid #c2ada3;
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px;
-          -ms-border-radius: 3px;
-          border-radius: 3px;
-          height: 32px; }
-      section .epark-content tr td label {
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          border-radius: 4px;
+          height: 34px; }
+      section .epark-content tr.tb-col td label {
         color: #444;
         font-weight: normal;
         position: relative;
         margin: 0; }
-        section .epark-content tr td label[for="member-1"] {
+        section .epark-content tr.tb-col td label[for="member-1"] {
           padding-left: 58px;
           padding-top: 24px; }
-        section .epark-content tr td label[for="member-2"] {
+        section .epark-content tr.tb-col td label[for="member-2"] {
           padding-left: 58px;
           padding-top: 14px; }
-        section .epark-content tr td label.radio-green:before {
+        section .epark-content tr.tb-col td label.radio-green:before {
           content: '';
           position: absolute;
           display: inline-block;
@@ -189,7 +243,7 @@ section {
           background-color: #d9d9d9;
           border-radius: 50%;
           margin-left: -28px; }
-        section .epark-content tr td label.checkbox-green:before {
+        section .epark-content tr.tb-col td label.checkbox-green:before {
           content: "";
           position: absolute;
           display: inline-block;
@@ -198,98 +252,85 @@ section {
           border-radius: 3px;
           left: -32px;
           background-color: #d9d9d9; }
-      section .epark-content tr td input[type="checkbox"]:checked + label.checkbox-green:before {
+      section .epark-content tr.tb-col td input[type="checkbox"]:checked + label.checkbox-green:before {
         content: "\f00c";
         font-family: FontAwesome;
         color: #fff;
         line-height: 22px;
         text-align: center;
         background-color: #8ec21f; }
-      section .epark-content tr td input[type="radio"]:checked + label.radio-green:before {
+      section .epark-content tr.tb-col td input[type="radio"]:checked + label.radio-green:before {
         background-color: #8ec21f; }
-      section .epark-content tr:nth-of-type(2) input[type="text"] {
-        margin: 5px 0 22px 30px;
-        padding-left: 5px;
-        width: 526px; }
-      section .epark-content tr:nth-of-type(2) span {
+      section .epark-content tr.tb-col td:first-child {
+        width: 230px;
+        background-color: #f3efe9;
+        padding-left: 12px; }
+      section .epark-content tr.tb-col:nth-of-type(1) {
+        border-top: 1px dotted #928f8c; }
+      section .epark-content tr.tb-col:nth-of-type(2) input[type="text"] {
+        margin: 5px 0 18px 29px;
+        padding-left: 10px;
+        width: 529px; }
+      section .epark-content tr.tb-col:nth-of-type(2) span {
         color: red; }
-      section .epark-content tr:nth-of-type(3) label {
-        margin-left: 30px; }
-        section .epark-content tr:nth-of-type(3) label:nth-of-type(1) ~ input[type="text"] {
-          width: 194px;
-          padding-left: 5px; }
-          section .epark-content tr:nth-of-type(3) label:nth-of-type(1) ~ input[type="text"]:not(:nth-of-type(2)) {
-            margin: 12px 16px 0 72px; }
-        section .epark-content tr:nth-of-type(3) label:nth-of-type(2) ~ input[type="text"] {
-          padding-left: 5px;
-          width: 194px; }
-          section .epark-content tr:nth-of-type(3) label:nth-of-type(2) ~ input[type="text"]:not(:nth-of-type(4)) {
-            margin: 18px 0 0 31px; }
-          section .epark-content tr:nth-of-type(3) label:nth-of-type(2) ~ input[type="text"]:nth-of-type(4) {
-            margin-left: 16px; }
-        section .epark-content tr:nth-of-type(3) label:nth-of-type(3) {
-          margin-top: 28px;
+      section .epark-content tr.tb-col:nth-of-type(2) td:first-child {
+        padding-top: 22px;
+        padding-bottom: 95px; }
+      section .epark-content tr.tb-col:nth-of-type(3) td:first-child {
+        padding-top: 22px;
+        padding-bottom: 120px; }
+      section .epark-content tr.tb-col:nth-of-type(3) label {
+        margin-left: 28px; }
+        section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(1) ~ input[type="text"] {
+          width: 200px;
+          padding-left: 10px; }
+          section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(1) ~ input[type="text"]:not(:nth-of-type(2)) {
+            margin: 12px 20px 0 62px; }
+        section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(2) ~ input[type="text"] {
+          padding-left: 10px;
+          width: 200px; }
+          section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(2) ~ input[type="text"]:not(:nth-of-type(4)) {
+            margin: 20px 0 0 21px; }
+          section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(2) ~ input[type="text"]:nth-of-type(4) {
+            margin-left: 20px; }
+        section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(3) {
+          margin-top: 24px;
           margin-bottom: 14px; }
-        section .epark-content tr:nth-of-type(3) label:nth-of-type(4) {
+        section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(4) {
           margin-left: 58px; }
-        section .epark-content tr:nth-of-type(3) label:nth-of-type(5) {
+        section .epark-content tr.tb-col:nth-of-type(3) label:nth-of-type(5) {
           margin-left: 64px; }
-      section .epark-content tr:nth-of-type(4) td {
-        padding-top: 16px;
-        padding-bottom: 16px; }
-        section .epark-content tr:nth-of-type(4) td div.input-group {
-          width: 608px; }
-      section .epark-content tr:nth-of-type(4) span.glyphicon-calendar:before {
-        content: url("../image/calendar.png"); }
-      section .epark-content tr:nth-of-type(4) input[type="text"] {
-        margin-left: 28px;
-        width: 528px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        border-radius: 3px; }
-        section .epark-content tr:nth-of-type(4) input[type="text"] + span {
-          background-color: #f3efe9;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          -ms-border-radius: 5px;
-          border-radius: 5px;
-          border: 2px solid #dfd2c3; }
-        section .epark-content tr:nth-of-type(4) input[type="text"] ~ span.input-group-addon {
-          background-color: #f3efe9 !important;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          -ms-border-radius: 5px;
-          border-radius: 5px;
-          border: 2px solid #dfd2c3 !important; }
-      section .epark-content tr:nth-of-type(5) label {
-        margin-left: 60px; }
-        section .epark-content tr:nth-of-type(5) label:nth-of-type(2) {
-          margin-left: 80px; }
-      section .epark-content tr:nth-of-type(5) td:first-child {
+      section .epark-content tr.tb-col:nth-of-type(5) label {
+        margin-left: 57px; }
+        section .epark-content tr.tb-col:nth-of-type(5) label:nth-of-type(2) {
+          margin-left: 94px; }
+      section .epark-content tr.tb-col:nth-of-type(5) td:first-child {
         padding-top: 20px;
         padding-bottom: 20px; }
-      section .epark-content tr:nth-of-type(6) td {
+      section .epark-content tr.tb-col:nth-of-type(6) td {
         padding-top: 20px;
         padding-bottom: 20px; }
-      section .epark-content tr:nth-of-type(6) label {
-        margin-left: 60px; }
-        section .epark-content tr:nth-of-type(6) label:nth-of-type(2) {
-          margin-left: 80px; }
-        section .epark-content tr:nth-of-type(6) label:nth-of-type(3) {
+      section .epark-content tr.tb-col:nth-of-type(6) label {
+        margin-left: 57px; }
+        section .epark-content tr.tb-col:nth-of-type(6) label:nth-of-type(2) {
+          margin-left: 94px; }
+        section .epark-content tr.tb-col:nth-of-type(6) label:nth-of-type(3) {
           margin-left: 70px; }
-      section .epark-content tr:nth-of-type(7) td:first-child {
+      section .epark-content tr.tb-col:nth-of-type(7) td:first-child {
         padding-top: 22px;
         padding-bottom: 40px; }
-      section .epark-content tr:nth-of-type(7) input[type="text"] {
-        width: 80px; }
-        section .epark-content tr:nth-of-type(7) input[type="text"]:first-child {
-          margin-left: 30px; }
-          section .epark-content tr:nth-of-type(7) input[type="text"]:first-child + span {
+      section .epark-content tr.tb-col:nth-of-type(7) input[type="text"] {
+        width: 90px;
+        height: 34px; }
+        section .epark-content tr.tb-col:nth-of-type(7) input[type="text"]:first-child {
+          margin-left: 29px; }
+          section .epark-content tr.tb-col:nth-of-type(7) input[type="text"]:first-child + span {
             margin-left: 8px;
             margin-right: 8px;
             font-weight: bold; }
-      section .epark-content tr:nth-of-type(7) button.btn-search-address {
+      section .epark-content tr.tb-col:nth-of-type(7) button.btn-search-address {
+        height: 34px;
+        width: 120px;
         margin-left: 38px;
         background-color: #f3efe9;
         border: 2px solid #e4dbce;
@@ -301,28 +342,28 @@ section {
         color: #846445;
         font-size: 12px;
         line-height: 12px; }
-      section .epark-content tr:nth-of-type(7) span {
+      section .epark-content tr.tb-col:nth-of-type(7) span {
         font-size: 11px; }
-      section .epark-content tr:nth-of-type(7) span.exemple {
+      section .epark-content tr.tb-col:nth-of-type(7) span.exemple {
         display: inline-block;
         padding-top: 8px;
         margin-left: 30px;
         margin-right: 10px; }
-      section .epark-content tr:nth-of-type(7) span:nth-of-type(3) {
+      section .epark-content tr.tb-col:nth-of-type(7) span:nth-of-type(3) {
         margin-right: 20px; }
-      section .epark-content tr:nth-child(8) td:first-child {
+      section .epark-content tr.tb-col:nth-child(8) td:first-child {
         padding-top: 22px;
         padding-bottom: 22px; }
-      section .epark-content tr:nth-child(8) td:last-child {
+      section .epark-content tr.tb-col:nth-child(8) td:last-child {
         position: relative; }
-      section .epark-content tr:nth-child(8) select {
+      section .epark-content tr.tb-col:nth-child(8) select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         background: url("../image/arrow.png") no-repeat right;
         background-position: 510px 10px;
-        width: 530px;
-        height: 32px;
+        width: 531px;
+        height: 34px;
         margin: 10px 0 10px 28px;
         border: 1px solid #c2ada3;
         -webkit-border-radius: 3px;
@@ -331,49 +372,60 @@ section {
         border-radius: 3px;
         background-color: #fff;
         padding-left: 5px; }
-      section .epark-content tr .input-type {
+      section .epark-content tr.tb-col .input-type {
         margin: 12px 0 12px 28px;
-        width: 530px;
+        width: 531px;
+        height: 34px;
         padding-left: 10px; }
-      section .epark-content tr:nth-last-of-type(3) input[type="text"] {
-        margin: 10px 0 10px 28px; }
-      section .epark-content tr:nth-last-of-type(3) p {
+      section .epark-content tr.tb-col:nth-last-of-type(3) td:first-child {
+        padding-top: 22px;
+        padding-bottom: 42px; }
+      section .epark-content tr.tb-col:nth-last-of-type(3) input[type="text"] {
+        padding: 12px 0 8px 28px; }
+      section .epark-content tr.tb-col:nth-last-of-type(3) p {
         margin-left: 28px;
-        margin-bottom: 12px; }
-      section .epark-content tr:nth-last-of-type(3) span:nth-of-type(1) {
+        padding-bottom: 10px;
+        margin-bottom: 0; }
+      section .epark-content tr.tb-col:nth-last-of-type(3) span:nth-of-type(1) {
         margin-left: 6px; }
-      section .epark-content tr:nth-last-of-type(3) span:nth-of-type(2) {
+      section .epark-content tr.tb-col:nth-last-of-type(3) span:nth-of-type(2) {
         margin-left: 22px;
         margin-right: 6px; }
-      section .epark-content tr:nth-last-of-type(2) td {
+      section .epark-content tr.tb-col:nth-last-of-type(2) td {
         padding-top: 24px; }
-      section .epark-content tr:nth-last-of-type(2) td:last-child {
+      section .epark-content tr.tb-col:nth-last-of-type(2) td:first-child {
+        padding-top: 22px;
+        padding-bottom: 114px; }
+      section .epark-content tr.tb-col:nth-last-of-type(2) td:last-child {
         padding-left: 58px; }
-      section .epark-content tr:nth-last-of-type(2) .left-checkbox, section .epark-content tr:nth-last-of-type(2) .right-checkbox {
+      section .epark-content tr.tb-col:nth-last-of-type(2) .left-checkbox, section .epark-content tr.tb-col:nth-last-of-type(2) .right-checkbox {
         width: 36%;
         float: left; }
-        section .epark-content tr:nth-last-of-type(2) .left-checkbox label, section .epark-content tr:nth-last-of-type(2) .right-checkbox label {
+        section .epark-content tr.tb-col:nth-last-of-type(2) .left-checkbox label, section .epark-content tr.tb-col:nth-last-of-type(2) .right-checkbox label {
           display: block;
           margin-bottom: 16px;
           color: #333;
           font-size: 13px; }
-          section .epark-content tr:nth-last-of-type(2) .left-checkbox label:last-child, section .epark-content tr:nth-last-of-type(2) .right-checkbox label:last-child {
+          section .epark-content tr.tb-col:nth-last-of-type(2) .left-checkbox label:last-child, section .epark-content tr.tb-col:nth-last-of-type(2) .right-checkbox label:last-child {
             margin-bottom: 22px; }
-      section .epark-content tr:nth-last-of-type(2) p {
+      section .epark-content tr.tb-col:nth-last-of-type(2) p {
         margin-left: -28px; }
-      section .epark-content tr:nth-last-of-type(1) td {
-        padding-top: 18px;
+      section .epark-content tr.tb-col:nth-last-of-type(1) td {
+        padding-top: 21px;
         padding-bottom: 18px; }
-      section .epark-content tr:nth-last-of-type(1) label {
+      section .epark-content tr.tb-col:nth-last-of-type(1) label {
         margin-left: 58px; }
 
 div.alert-bottom {
   background-color: #ffe9ea;
-  margin-top: 22px; }
+  margin-top: 22px;
+  height: 30px; }
   div.alert-bottom p {
     color: #cb141a;
     font-weight: bold;
-    padding: 5px 16px; }
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 2px; }
 
 div.spark-btn-update {
   width: 583px;
@@ -382,8 +434,9 @@ div.spark-btn-update {
   margin-bottom: 58px; }
   div.spark-btn-update button {
     width: 280px;
-    height: 42px;
+    height: 50px;
     font-weight: bold;
+    line-height: 50px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -392,7 +445,7 @@ div.spark-btn-update {
       background-color: #f3efe9;
       border: 2px solid #e4dbce;
       color: #936945;
-      margin-right: 17px; }
+      margin-right: 10px; }
     div.spark-btn-update button:last-child {
       background-color: #e0f2b6;
       border: 2px solid #b4d46e;
@@ -454,16 +507,28 @@ footer {
   #page-top span {
     text-transform: uppercase;
     font-family: arial;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     position: absolute;
-    top: 33px;
-    margin-left: -1px;
-    font-weight: bold; }
+    top: 35px;
+    margin-left: 10px;
+    font-weight: bold;
+    letter-spacing: -1px; }
 
 .alert {
   width: 530px;
   margin-left: 30px;
   display: none; }
+
+.ui-datepicker {
+  margin-left: 100px;
+  z-index: 1000; }
+
+.ui-datepicker-trigger {
+  margin-top: 7px;
+  margin-left: -30px;
+  margin-bottom: 0px;
+  position: absolute;
+  z-index: 1000; }
 
 /*# sourceMappingURL=style.css.map */

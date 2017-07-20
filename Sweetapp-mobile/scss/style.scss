@@ -1,48 +1,131 @@
+
 .wrap-container {
   width: 640px;
   margin: 0 auto;
 }
 .container {
-    width: 604px;
+    width: calc(100% - 40px);
     padding: 0;
   }
+@media screen and (max-width: 641px) {
+  .wrap-container {
+    width: 640px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrap-container {
+    width: 414px;
+  }
+  .container {
+    width: 396px;
+  }
+}
 header {
   border-bottom: 2px solid #c3000b;
   background: url("../image/background.png") no-repeat;
+  background-size: 100% 100%;
   .epark-logo {
-    margin: 20px 0;
+    margin: 24px 0;
   }
   .right-header {
-    width: 200px;
     float: right;
-    margin-top: 35px;
-    padding-left: 60px;
+    margin-top: 39px;
+    margin-right: 20px;
     ul {
       list-style: none;
+      margin: 0;
       li {
         display: inline-block;
         &:first-child {
-          margin-right: 10px;
+          margin-right: 14px;
           button {
             border: none;
             background: url('../image/cart.png') no-repeat;
-            padding: 20px 20px;
+            padding: 18px 26px;
           }
         };
         &:last-child {
           button {
             border: none;
             background: url('../image/login.png') no-repeat;
-            padding: 20px 20px;
+            padding: 17px 17px;
           };
         }
       }
     }
   }  
 }
+.clear-both {
+  clear: both;
+}
+@media screen and (max-width: 738px) and (min-width: 700px) {
+  .wrap-container{
+    width:  712px;
+  }
+  .container {
+    width: 93.75%;
+  }
+}
+@media screen and (max-width: 680px) and (min-width: 670px) {
+  .wrap-container {
+    width: 668px;
+  }
+  .container {
+    width: 93.75%;
+  }
+}
+@media screen and (max-width: 370px) and (min-width: 340px) {
+  .wrap-container {
+    width: 360px;
+  }
+  .container {
+    width: 93.75%;
+  }
+}
+@media screen and (max-width: 326px) and (min-width: 300px) {
+  .wrap-container {
+    width: 320px;
+  }
+  .container {
+    width: 93.75%;
+  }
+  div.right-header {
+    margin-right: 0;
+    ul.epark-right-menu {
+      li:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+  a.back-href + h1.head-h1 {
+    font-size: 24px;
+  }
+  section a.back-href {
+    margin-left: 2px;
+  }
+  div.nickname-class div.round-radio label.label-name {
+    font-size: 20px;
+    & + div.check-name2 {
+      top: -72px;
+    }
+    & + div.check-name1 {
+      top: -52px;
+    }
+  }
+  div.nickname-class div.round-radio label.label-name-padding {
+    padding-top: 24px;
+  }
+}
+@media screen and (max-width: 390px) and (min-width: 371px) {
+  .wrap-container {
+    width: 375px;
+  }
+  .container {
+    width: 93.75%;
+  }
+}
 section {
   span.back-arrow {
-
       display: block;
       width: 20px;
       height: 40px;
@@ -62,9 +145,9 @@ section {
     margin-left: 12px;
     & + h1 {
       margin-top: 32px;
-      width: 240px;
+      width: 50%;
       font-size: 30px;
-      margin-left: 200px;
+      margin-left: 33.333333%;
       color: #333;
     }
   }
@@ -108,23 +191,32 @@ section {
   border-radius: 5px;
 }
 .info-detail {
+  width: 93.33333333%;
   p.title-p {
     color: #888;
     font-size: 22px;
     font-weight: bold;
   }
+  .name-register {
+    width: 100%;
+  }
+  .head-name-register {
+    width: 100%;
+  }
+  .detail-name {
+    width: 48.214285%;
+  }
   .round-radio {
-    width: 560px;
+    width: 100%;
     height: 78px;
     @extend .bor-gray;
     border-radius: 5px;
   }
   .round-radio-short {
-    width: 266px;
+    width: 45.5%;
     height: 78px;
     @extend .bor-gray;
   }
-  width: 560px;
   margin: 0 auto;
   .name-register {
     margin-top: 28px;
@@ -138,15 +230,16 @@ section {
       margin-bottom: 18px;
       .detail-name {
         display: inline-block;
+        float: left;
         &:not(:last-child) {
-          margin-right: 16px;
+          margin-right: 3.39285714%;
         }
         span {
           color: #888;
           font-size: 22px;
         }
         input {
-          width: 268px;
+          width: 100%;
           height: 78px;
           @extend .bor-gray;
           font-size: 34px;
@@ -162,7 +255,7 @@ section {
     margin-bottom: 16px;
   }
   input[type="text"] {
-    width: 560px;
+    width: 100%;
     height: 78px;
     @extend .bor-gray;
     font-size: 34px;
@@ -179,7 +272,7 @@ section {
 .birth-day {
   margin-top: 40px;
   input[type="text"] {
-    width: 420px;
+    width: 100%;
     height: 78px;
     @extend .bor-gray;
     border-radius: 5px !important;
@@ -229,6 +322,7 @@ section {
   button {
     width: 160px;
     height: 78px;
+    padding-top: 14px;
     border: 5px solid #e4dbcd;
     background-color: #f3efe9;
     border-radius: 5px;
@@ -246,7 +340,7 @@ section {
 .address-info {
   margin-top: 50px;
   input[type="text"], select {
-    width: 418px;
+    width: 75%;
     height: 78px;
     @extend .bor-gray;
     font-size: 34px;
@@ -284,7 +378,7 @@ section {
 .phone-info {
   margin-top: 38px;
   input[type="text"] {
-    width: 560px;
+    width: 100%;
     height: 78px;
     @extend .bor-gray;
     margin-top: 8px;
@@ -303,7 +397,7 @@ section {
     margin-bottom: 18px;
   }
   .round-checkbox {
-    width: 560px;
+    width: 100%;
     height: 78px;
     @extend .bor-gray;
   }
@@ -327,7 +421,7 @@ section {
   margin-top: 48px;
   button {
     display: block;
-    width: 590px;
+    width: 98.3333333%;
     height: 80px;
     border-radius: 5px;
     font-size: 26px;
@@ -385,7 +479,7 @@ footer {
       button {
         display: block;
         margin: 0 auto;
-        width: 480px;
+        width: 80%;
         height: 60px;
         border: none;
         border-radius: 5px;
@@ -408,23 +502,29 @@ footer {
     &:hover {
       cursor: pointer;
     };
-    position: relative;
-    height: 100px;
-    width: 100px;
-    top: -384px;
-    right: -490px;
-    border-radius: 50%;
-    background: url("../image/up-narrow.png") center no-repeat;
-    background-color: #916a41;
-    background-position: 32px 20px;
-    span {
-      display: block;
-      position: absolute;
-      color: #fff;
-      top: 50px;
-      right: 16px;
-      text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    div.span-col {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      /*top: -384px;*/
+      /*right: -490px;*/
+      border-radius: 50%;
+      background: url("../image/up-narrow.png") center no-repeat;
+      background-color: #916a41;
+      background-position: 32px 20px;
+      span {
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 50px;
+        right: 16px;
+        text-transform: uppercase;
+      }
     }
+    
     
   }
 }
