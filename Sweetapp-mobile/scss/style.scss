@@ -1,31 +1,19 @@
 
 .wrap-container {
-  width: 640px;
+  width: 100%;
   margin: 0 auto;
 }
 .container {
     width: calc(100% - 40px);
     padding: 0;
   }
-@media screen and (max-width: 641px) {
-  .wrap-container {
-    width: 640px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .wrap-container {
-    width: 414px;
-  }
-  .container {
-    width: 396px;
-  }
-}
 header {
   border-bottom: 2px solid #c3000b;
   background: url("../image/background.png") no-repeat;
   background-size: 100% 100%;
   .epark-logo {
     margin: 24px 0;
+    width: 25%;
   }
   .right-header {
     float: right;
@@ -55,74 +43,59 @@ header {
     }
   }  
 }
-.clear-both {
-  clear: both;
-}
-@media screen and (max-width: 738px) and (min-width: 700px) {
-  .wrap-container{
-    width:  712px;
-  }
-  .container {
-    width: 93.75%;
-  }
-}
-@media screen and (max-width: 680px) and (min-width: 670px) {
-  .wrap-container {
-    width: 668px;
-  }
-  .container {
-    width: 93.75%;
-  }
-}
-@media screen and (max-width: 370px) and (min-width: 340px) {
-  .wrap-container {
-    width: 360px;
-  }
-  .container {
-    width: 93.75%;
-  }
-}
-@media screen and (max-width: 326px) and (min-width: 300px) {
-  .wrap-container {
-    width: 320px;
-  }
-  .container {
-    width: 93.75%;
-  }
-  div.right-header {
-    margin-right: 0;
-    ul.epark-right-menu {
-      li:first-child {
-        margin-right: 0;
+@media screen and (max-width: 528px) and (min-width: 320px) {
+  header {
+    div.right-header {
+      margin-top: 24px;
+      margin-right: 0px;
+      ul {
+        li:first-child {
+          margin-right: 2px;
+        }
+      }
+    }
+    div.right-header {
+      ul.epark-right-menu {
+        button {
+          background-size: 90% 90%;
+          padding: 14px 15px;
+        }
       }
     }
   }
-  a.back-href + h1.head-h1 {
-    font-size: 24px;
-  }
-  section a.back-href {
-    margin-left: 2px;
-  }
-  div.nickname-class div.round-radio label.label-name {
-    font-size: 20px;
-    & + div.check-name2 {
-      top: -72px;
+  section.wrap-container {
+    span.back-arrow {
+      margin-top: 10px;
+      background-size: 50%; 
     }
-    & + div.check-name1 {
-      top: -52px;
+    a.back-href {
+      font-size: 16px;
+      margin-top: 20px;
+      & + h1 {
+        font-size: 16px;margin-top: 22px;
+      }
     }
-  }
-  div.nickname-class div.round-radio label.label-name-padding {
-    padding-top: 24px;
+    div.title-head {
+      height: 54px;
+      h1 {
+        font-size: 24px;
+        margin-top: 16px;
+      }
+      button.pancil {
+        height: 28px;
+        width: 66px;
+        font-size: 12px;
+        margin-top: 14px;
+        span {
+          margin-left: 4px;
+          margin-top: 2px;
+        }
+      }
+    }
   }
 }
-@media screen and (max-width: 390px) and (min-width: 371px) {
-  .wrap-container {
-    width: 375px;
-  }
-  .container {
-    width: 93.75%;
-  }
+.clear-both {
+  clear: both;
 }
 section {
   span.back-arrow {
@@ -151,7 +124,7 @@ section {
       color: #333;
     }
   }
-  div.title-head {
+  .title-head {
     height: 74px;
     border-top: 4px solid #916a41;
     border-bottom: 4px solid #916a41;
@@ -249,6 +222,40 @@ section {
     }
   }
 }
+@media screen and (max-width: 540px) and (min-width: 320px) {
+  div.info-detail {
+    div.name-register {
+      input[type="text"].input-name {
+        height: 40px;
+      }
+    }
+    div.nickname-class {
+      div.round-radio {
+        height: 40px;
+        label {
+          padding: 0;
+          padding-top: 12px;
+          padding-left: 52px;
+          font-size: 12px;
+          & + div.check {
+            top: -28px;
+          }
+        }
+      }
+      input.input-nickname {
+        height: 40px;
+      }
+    }
+    div.birth-day {
+      input[type="text"] {
+        height: 40px;
+        & + span {
+          background-size: 24px;
+        }
+      }
+    }
+  }
+}
 .nickname-class {
   margin-top: 38px;
   p {
@@ -272,32 +279,37 @@ section {
 .birth-day {
   margin-top: 40px;
   input[type="text"] {
-    width: 100%;
+    width: 90%;
     height: 78px;
+    font-size: 12px;
     @extend .bor-gray;
     border-radius: 5px !important;
     font-size: 34px;
     margin-right: 26px;
     & ~ span.input-group-addon {
       background-color: #f3efe9;
-      width: 109px;
+      width: 21.25%;
       border: 5px solid #ded3c2;
       border-radius: 5px;
       background: url("../image/calendar.png") no-repeat center;
     }
-    
-      & + span.input-group-addon:last-child:focus {
-        background: red;
-      }
-  
+    & + span.input-group-addon:last-child:focus {
+      background: red;
+    }
+    &.form-control {
+      margin-right: 0;
+    }
   }
 }
 .gender-info {
   margin-top: 38px;
   div.round-radio-short {
+    div.check {
+    }
     display: inline-block;
-    &:first-of-type{
-      margin-right: 22px;
+    width: 48.2142%;
+    &:last-of-type {
+      float: right;
     };
   }
 }
@@ -310,29 +322,83 @@ section {
 .post-code {
   margin-top: 30px;
   input[type="text"] {
-    width: 160px;
+    width: 28.57%;
     height: 78px;
     @extend .bor-gray;
     font-size: 34px;
   }
   span {
     display: inline-block;
-    margin: 0 14px;
+    margin: 0 2.5%;
   }
   button {
-    width: 160px;
+    width: 28.57%;
     height: 78px;
     padding-top: 14px;
     border: 5px solid #e4dbcd;
     background-color: #f3efe9;
     border-radius: 5px;
-    margin-left: 28px;
+    float: right;
   }
   p:last-of-type {
     margin-top: 20px;
     color: #916a41;
     font-size: 22px;
   }
+}
+@media screen and (max-width: 540px) and (min-width: 320px) {
+  section div.info-detail {
+    div.name-register {
+      margin-top: 9px;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    div.nickname-class, div.contact-info, div.birth-day, div.gender-info, div.post-code, div.address-info, div.phone-info, div.suite-guide-info, div.receive-mail-info{
+      margin-top: 19px;
+    }
+  }
+  div.btn-register {
+    margin-top: 24px;
+  }
+  .gender-info {
+    div.round-radio-short {
+      height: 40px;
+      label[for] {
+        font-size: 12px;
+        padding-top: 12px;
+        & + div.check {
+          top: -48px;
+        }
+      }
+    }
+  }
+  div.post-code {
+    input[type="text"] {
+      height: 40px;
+    }
+    button {
+      height: 40px;
+      font-size: 12px;
+      color: #836442;
+      padding: 0;
+    }
+    p.p-note {
+      font-size: 12px;
+    }
+  }
+  div.contact-info {
+    div.round-radio {
+      height: 40px;
+      label[for] {
+        padding-top: 12px;
+        font-size: 12px;
+        & + div.check {
+          top: -48px;
+        }
+      }
+    }
+  } 
 }
 .both-clear {
   clear: both;
@@ -341,38 +407,92 @@ section {
   margin-top: 50px;
   input[type="text"], select {
     width: 75%;
-    height: 78px;
+    height: 80px;
     @extend .bor-gray;
     font-size: 34px;
+    float: right;
   }
   div.add-info-row {
-    margin-bottom: 20px;
+    clear: both;
+    margin-top: 40px;
   }
   label {
     display: inline-block;
-    float: left;
     margin-top: 24px;
     font-size: 22px;
     color: #888;
     font-weight: normal;
   }
   select {
-    margin-left: 52px;
     background-color: #fff;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
     background: url("../image/arrow.png") no-repeat;
-    background-position: 380px 30px;
+    background-position: 94% 50%;
   }
-  div.add-info-row:nth-of-type(2) input {
-    margin-left: 74px;
+}
+@media screen and (max-width: 540px) and (min-width: 320px) {
+  .address-info {
+    label {
+      font-size: 12px;
+      width: 24%;
+    }
+    select {
+      height: 40px;
+    }
+    div.add-info-row {
+      margin-top: 20px;
+      input[type="text"] {
+        height: 40px;
+      }
+      label {
+        margin-top: 10px;
+      }
+    }
   }
-  div.add-info-row:nth-of-type(3) input {
-    margin-left: 30px;
+  .birth-day input[type="text"] {
+    font-size: 20px;
   }
-  div.add-info-row:nth-of-type(4) input {
-    margin-left: 74px;
+  .phone-info {
+    input[type="text"].input-phone {
+      height: 40px;
+      & + span {
+        font-size: 12px;
+      }
+    }
+  }
+  div.suite-guide-info {
+    div.round-checkbox {
+      height: 40px;
+      label[for] {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-right: 60px;
+        font-size: 12px;
+        & + div.tick-checkbox {
+          width: 20px;
+          height: 20px;
+          border-radius: 4px;
+          top: -36px;
+        }
+      }
+      input[type="checkbox"] {
+        &:checked {
+          & ~ div.tick-checkbox{
+            background-size: 86%;
+          };
+        };
+      }
+    }
+  }
+}
+@media screen and (max-width: 365px) and (min-width: 320px) {
+  div.info-detail div.nickname-class div.round-radio:last-of-type label {
+    padding-top: 3px;
+    & + div.check {
+      top: -34px;
+    }
   }
 }
 .phone-info {
@@ -398,7 +518,7 @@ section {
   }
   .round-checkbox {
     width: 100%;
-    height: 78px;
+    height: 80px;
     @extend .bor-gray;
   }
   div.round-checkbox:not(:last-of-type) {
@@ -412,9 +532,91 @@ section {
   }
   div.round-radio-short {
     display: inline-block;
+    width: 48.214285%;
     &:first-of-type{
-      margin-right: 20px;
+      margin-right: 3.5714%;
     };
+    &:last-of-type {
+      float: right;
+    };
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 319px) {
+  .receive-mail-info {
+    div.round-radio-short {
+      height: 40px;
+      label[for] {
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 38px;
+        + div.check {
+          left: 4px;
+          top: -40px;
+        }
+      }
+    }
+  }
+  section div.btn-register {
+    button {
+      height: 45px;
+      font-size: 16px;
+    }
+  }
+  footer div.bottom-footer {
+    .row-href {
+      a[href] {
+        font-size: 12px;
+        line-height: 12px;
+      }
+      &:first-of-type{
+        margin-top: 15px;
+        margin-bottom: 2px;
+      };
+    }
+  }
+  footer div.bottom-footer div.btn-register-top {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    button {
+      font-size: 12px;
+    }
+    span {
+      text-align: center;
+    }
+  }
+  footer.wrap-container > p {
+    margin: 12px;
+    font-size: 12px;
+  }
+  footer div#to-top {
+    div.span-col {
+      height: 65px;
+      width: 65px;
+      background-position: 15px 15px;
+      span {
+        font-size: 11px;
+        right: 5px; 
+        top: 40px;
+      }
+    }
+  }
+  div.title-head {
+    h1 {
+      font-size: 15px;
+    }
+  }
+  .info-detail .name-register > p,.info-detail p.title-p,.nickname-class label,.info-detail p.title-p {
+    font-size: 11px;
+  }
+  .info-detail .name-register .head-name-register .detail-name span {
+    font-size: 11px;
+  }
+  section.wrap-container a.back-href + h1 {
+    font-size: 15px;
+  }
+  .birth-day input[type="text"] {
+    font-size: 15px;
   }
 }
 .btn-register {
@@ -422,7 +624,7 @@ section {
   button {
     display: block;
     width: 98.3333333%;
-    height: 80px;
+    height: 90px;
     border-radius: 5px;
     font-size: 26px;
     font-weight: bold;
@@ -462,7 +664,7 @@ footer {
         display: inline-block;
         font-size: 24px;
         color: #916a41;
-        padding: 0 16px;
+        padding: 0 2.85714%;
         line-height: 24px;  
         &:not(:last-of-type){
           border-right: 1px solid #916a41;
@@ -507,10 +709,8 @@ footer {
     right: 20px;
     div.span-col {
       position: relative;
-      height: 100px;
       width: 100px;
-      /*top: -384px;*/
-      /*right: -490px;*/
+      height: 100px;
       border-radius: 50%;
       background: url("../image/up-narrow.png") center no-repeat;
       background-color: #916a41;

@@ -1,26 +1,18 @@
 .wrap-container {
-  width: 640px;
+  width: 100%;
   margin: 0 auto; }
 
 .container {
   width: calc(100% - 40px);
   padding: 0; }
 
-@media screen and (max-width: 641px) {
-  .wrap-container {
-    width: 640px; } }
-@media screen and (max-width: 480px) {
-  .wrap-container {
-    width: 414px; }
-
-  .container {
-    width: 396px; } }
 header {
   border-bottom: 2px solid #c3000b;
   background: url("../image/background.png") no-repeat;
   background-size: 100% 100%; }
   header .epark-logo {
-    margin: 24px 0; }
+    margin: 24px 0;
+    width: 25%; }
   header .right-header {
     float: right;
     margin-top: 39px;
@@ -41,60 +33,41 @@ header {
           background: url("../image/login.png") no-repeat;
           padding: 17px 17px; }
 
+@media screen and (max-width: 528px) and (min-width: 320px) {
+  header div.right-header {
+    margin-top: 24px;
+    margin-right: 0px; }
+    header div.right-header ul li:first-child {
+      margin-right: 2px; }
+  header div.right-header ul.epark-right-menu button {
+    background-size: 90% 90%;
+    padding: 14px 15px; }
+
+  section.wrap-container span.back-arrow {
+    margin-top: 10px;
+    background-size: 50%; }
+  section.wrap-container a.back-href {
+    font-size: 16px;
+    margin-top: 20px; }
+    section.wrap-container a.back-href + h1 {
+      font-size: 16px;
+      margin-top: 22px; }
+  section.wrap-container div.title-head {
+    height: 54px; }
+    section.wrap-container div.title-head h1 {
+      font-size: 24px;
+      margin-top: 16px; }
+    section.wrap-container div.title-head button.pancil {
+      height: 28px;
+      width: 66px;
+      font-size: 12px;
+      margin-top: 14px; }
+      section.wrap-container div.title-head button.pancil span {
+        margin-left: 4px;
+        margin-top: 2px; } }
 .clear-both {
   clear: both; }
 
-@media screen and (max-width: 738px) and (min-width: 700px) {
-  .wrap-container {
-    width: 712px; }
-
-  .container {
-    width: 93.75%; } }
-@media screen and (max-width: 680px) and (min-width: 670px) {
-  .wrap-container {
-    width: 668px; }
-
-  .container {
-    width: 93.75%; } }
-@media screen and (max-width: 370px) and (min-width: 340px) {
-  .wrap-container {
-    width: 360px; }
-
-  .container {
-    width: 93.75%; } }
-@media screen and (max-width: 326px) and (min-width: 300px) {
-  .wrap-container {
-    width: 320px; }
-
-  .container {
-    width: 93.75%; }
-
-  div.right-header {
-    margin-right: 0; }
-    div.right-header ul.epark-right-menu li:first-child {
-      margin-right: 0; }
-
-  a.back-href + h1.head-h1 {
-    font-size: 24px; }
-
-  section a.back-href {
-    margin-left: 2px; }
-
-  div.nickname-class div.round-radio label.label-name {
-    font-size: 20px; }
-    div.nickname-class div.round-radio label.label-name + div.check-name2 {
-      top: -72px; }
-    div.nickname-class div.round-radio label.label-name + div.check-name1 {
-      top: -52px; }
-
-  div.nickname-class div.round-radio label.label-name-padding {
-    padding-top: 24px; } }
-@media screen and (max-width: 390px) and (min-width: 371px) {
-  .wrap-container {
-    width: 375px; }
-
-  .container {
-    width: 93.75%; } }
 section span.back-arrow {
   display: block;
   width: 20px;
@@ -118,16 +91,16 @@ section .back-href {
     font-size: 30px;
     margin-left: 33.333333%;
     color: #333; }
-section div.title-head {
+section .title-head {
   height: 74px;
   border-top: 4px solid #916a41;
   border-bottom: 4px solid #916a41; }
-  section div.title-head h1 {
+  section .title-head h1 {
     font-size: 30px;
     margin-top: 24px;
     color: #333;
     float: left; }
-  section div.title-head button.pancil {
+  section .title-head button.pancil {
     float: right;
     margin-top: 22px;
     margin-bottom: 8px;
@@ -140,7 +113,7 @@ section div.title-head {
     font-size: 18px;
     font-weight: bold;
     padding: 0; }
-    section div.title-head button.pancil span {
+    section .title-head button.pancil span {
       background: url("../image/pencil.png") left no-repeat;
       display: inline-block;
       width: 86px;
@@ -195,6 +168,24 @@ section div.title-head {
           font-size: 34px;
           color: #555; }
 
+@media screen and (max-width: 540px) and (min-width: 320px) {
+  div.info-detail div.name-register input[type="text"].input-name {
+    height: 40px; }
+  div.info-detail div.nickname-class div.round-radio {
+    height: 40px; }
+    div.info-detail div.nickname-class div.round-radio label {
+      padding: 0;
+      padding-top: 12px;
+      padding-left: 52px;
+      font-size: 12px; }
+      div.info-detail div.nickname-class div.round-radio label + div.check {
+        top: -28px; }
+  div.info-detail div.nickname-class input.input-nickname {
+    height: 40px; }
+  div.info-detail div.birth-day input[type="text"] {
+    height: 40px; }
+    div.info-detail div.birth-day input[type="text"] + span {
+      background-size: 24px; } }
 .nickname-class {
   margin-top: 38px; }
   .nickname-class p {
@@ -213,26 +204,30 @@ section div.title-head {
 .birth-day {
   margin-top: 40px; }
   .birth-day input[type="text"] {
-    width: 100%;
+    width: 90%;
     height: 78px;
+    font-size: 12px;
     border-radius: 5px !important;
     font-size: 34px;
     margin-right: 26px; }
     .birth-day input[type="text"] ~ span.input-group-addon {
       background-color: #f3efe9;
-      width: 109px;
+      width: 21.25%;
       border: 5px solid #ded3c2;
       border-radius: 5px;
       background: url("../image/calendar.png") no-repeat center; }
     .birth-day input[type="text"] + span.input-group-addon:last-child:focus {
       background: red; }
+    .birth-day input[type="text"].form-control {
+      margin-right: 0; }
 
 .gender-info {
   margin-top: 38px; }
   .gender-info div.round-radio-short {
-    display: inline-block; }
-    .gender-info div.round-radio-short:first-of-type {
-      margin-right: 22px; }
+    display: inline-block;
+    width: 48.2142%; }
+    .gender-info div.round-radio-short:last-of-type {
+      float: right; }
 
 .contact-info {
   margin-top: 40px; }
@@ -242,25 +237,61 @@ section div.title-head {
 .post-code {
   margin-top: 30px; }
   .post-code input[type="text"] {
-    width: 160px;
+    width: 28.57%;
     height: 78px;
     font-size: 34px; }
   .post-code span {
     display: inline-block;
-    margin: 0 14px; }
+    margin: 0 2.5%; }
   .post-code button {
-    width: 160px;
+    width: 28.57%;
     height: 78px;
     padding-top: 14px;
     border: 5px solid #e4dbcd;
     background-color: #f3efe9;
     border-radius: 5px;
-    margin-left: 28px; }
+    float: right; }
   .post-code p:last-of-type {
     margin-top: 20px;
     color: #916a41;
     font-size: 22px; }
 
+@media screen and (max-width: 540px) and (min-width: 320px) {
+  section div.info-detail div.name-register {
+    margin-top: 9px; }
+    section div.info-detail div.name-register p {
+      margin-bottom: 10px; }
+  section div.info-detail div.nickname-class, section div.info-detail div.contact-info, section div.info-detail div.birth-day, section div.info-detail div.gender-info, section div.info-detail div.post-code, section div.info-detail div.address-info, section div.info-detail div.phone-info, section div.info-detail div.suite-guide-info, section div.info-detail div.receive-mail-info {
+    margin-top: 19px; }
+
+  div.btn-register {
+    margin-top: 24px; }
+
+  .gender-info div.round-radio-short {
+    height: 40px; }
+    .gender-info div.round-radio-short label[for] {
+      font-size: 12px;
+      padding-top: 12px; }
+      .gender-info div.round-radio-short label[for] + div.check {
+        top: -48px; }
+
+  div.post-code input[type="text"] {
+    height: 40px; }
+  div.post-code button {
+    height: 40px;
+    font-size: 12px;
+    color: #836442;
+    padding: 0; }
+  div.post-code p.p-note {
+    font-size: 12px; }
+
+  div.contact-info div.round-radio {
+    height: 40px; }
+    div.contact-info div.round-radio label[for] {
+      padding-top: 12px;
+      font-size: 12px; }
+      div.contact-info div.round-radio label[for] + div.check {
+        top: -48px; } }
 .both-clear {
   clear: both; }
 
@@ -268,32 +299,66 @@ section div.title-head {
   margin-top: 50px; }
   .address-info input[type="text"], .address-info select {
     width: 75%;
-    height: 78px;
-    font-size: 34px; }
+    height: 80px;
+    font-size: 34px;
+    float: right; }
   .address-info div.add-info-row {
-    margin-bottom: 20px; }
+    clear: both;
+    margin-top: 40px; }
   .address-info label {
     display: inline-block;
-    float: left;
     margin-top: 24px;
     font-size: 22px;
     color: #888;
     font-weight: normal; }
   .address-info select {
-    margin-left: 52px;
     background-color: #fff;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background: url("../image/arrow.png") no-repeat;
-    background-position: 380px 30px; }
-  .address-info div.add-info-row:nth-of-type(2) input {
-    margin-left: 74px; }
-  .address-info div.add-info-row:nth-of-type(3) input {
-    margin-left: 30px; }
-  .address-info div.add-info-row:nth-of-type(4) input {
-    margin-left: 74px; }
+    background-position: 94% 50%; }
 
+@media screen and (max-width: 540px) and (min-width: 320px) {
+  .address-info label {
+    font-size: 12px;
+    width: 24%; }
+  .address-info select {
+    height: 40px; }
+  .address-info div.add-info-row {
+    margin-top: 20px; }
+    .address-info div.add-info-row input[type="text"] {
+      height: 40px; }
+    .address-info div.add-info-row label {
+      margin-top: 10px; }
+
+  .birth-day input[type="text"] {
+    font-size: 20px; }
+
+  .phone-info input[type="text"].input-phone {
+    height: 40px; }
+    .phone-info input[type="text"].input-phone + span {
+      font-size: 12px; }
+
+  div.suite-guide-info div.round-checkbox {
+    height: 40px; }
+    div.suite-guide-info div.round-checkbox label[for] {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-right: 60px;
+      font-size: 12px; }
+      div.suite-guide-info div.round-checkbox label[for] + div.tick-checkbox {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        top: -36px; }
+    div.suite-guide-info div.round-checkbox input[type="checkbox"]:checked ~ div.tick-checkbox {
+      background-size: 86%; } }
+@media screen and (max-width: 365px) and (min-width: 320px) {
+  div.info-detail div.nickname-class div.round-radio:last-of-type label {
+    padding-top: 3px; }
+    div.info-detail div.nickname-class div.round-radio:last-of-type label + div.check {
+      top: -34px; } }
 .phone-info {
   margin-top: 38px; }
   .phone-info input[type="text"] {
@@ -313,7 +378,7 @@ section div.title-head {
     margin-bottom: 18px; }
   .suite-guide-info .round-checkbox {
     width: 100%;
-    height: 78px; }
+    height: 80px; }
   .suite-guide-info div.round-checkbox:not(:last-of-type) {
     margin-bottom: 20px; }
 
@@ -322,16 +387,77 @@ section div.title-head {
   .receive-mail-info p.title-p {
     margin-bottom: 18px; }
   .receive-mail-info div.round-radio-short {
-    display: inline-block; }
+    display: inline-block;
+    width: 48.214285%; }
     .receive-mail-info div.round-radio-short:first-of-type {
-      margin-right: 20px; }
+      margin-right: 3.5714%; }
+    .receive-mail-info div.round-radio-short:last-of-type {
+      float: right; }
 
+@media screen and (max-width: 599px) and (min-width: 319px) {
+  .receive-mail-info div.round-radio-short {
+    height: 40px; }
+    .receive-mail-info div.round-radio-short label[for] {
+      font-size: 14px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 38px; }
+      .receive-mail-info div.round-radio-short label[for] + div.check {
+        left: 4px;
+        top: -40px; }
+
+  section div.btn-register button {
+    height: 45px;
+    font-size: 16px; }
+
+  footer div.bottom-footer .row-href a[href] {
+    font-size: 12px;
+    line-height: 12px; }
+  footer div.bottom-footer .row-href:first-of-type {
+    margin-top: 15px;
+    margin-bottom: 2px; }
+
+  footer div.bottom-footer div.btn-register-top {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+    footer div.bottom-footer div.btn-register-top button {
+      font-size: 12px; }
+    footer div.bottom-footer div.btn-register-top span {
+      text-align: center; }
+
+  footer.wrap-container > p {
+    margin: 12px;
+    font-size: 12px; }
+
+  footer div#to-top div.span-col {
+    height: 65px;
+    width: 65px;
+    background-position: 15px 15px; }
+    footer div#to-top div.span-col span {
+      font-size: 11px;
+      right: 5px;
+      top: 40px; }
+
+  div.title-head h1 {
+    font-size: 15px; }
+
+  .info-detail .name-register > p, .info-detail p.title-p, .nickname-class label, .info-detail p.title-p {
+    font-size: 11px; }
+
+  .info-detail .name-register .head-name-register .detail-name span {
+    font-size: 11px; }
+
+  section.wrap-container a.back-href + h1 {
+    font-size: 15px; }
+
+  .birth-day input[type="text"] {
+    font-size: 15px; } }
 .btn-register {
   margin-top: 48px; }
   .btn-register button {
     display: block;
     width: 98.3333333%;
-    height: 80px;
+    height: 90px;
     border-radius: 5px;
     font-size: 26px;
     font-weight: bold; }
@@ -365,7 +491,7 @@ footer {
         display: inline-block;
         font-size: 24px;
         color: #916a41;
-        padding: 0 16px;
+        padding: 0 2.85714%;
         line-height: 24px; }
         footer .bottom-footer .row-href a:not(:last-of-type) {
           border-right: 1px solid #916a41; }
@@ -400,10 +526,8 @@ footer {
       cursor: pointer; }
     footer #to-top div.span-col {
       position: relative;
-      height: 100px;
       width: 100px;
-      /*top: -384px;*/
-      /*right: -490px;*/
+      height: 100px;
       border-radius: 50%;
       background: url("../image/up-narrow.png") center no-repeat;
       background-color: #916a41;
