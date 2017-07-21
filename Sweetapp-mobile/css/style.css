@@ -173,7 +173,8 @@ section .title-head {
   div.info-detail div.name-register input[type="text"].input-name {
     height: 40px; }
   div.info-detail div.nickname-class div.round-radio {
-    height: 40px; }
+    height: 40px;
+    margin-bottom: 10px; }
     div.info-detail div.nickname-class div.round-radio label {
       padding: 0;
       padding-top: 12px;
@@ -303,7 +304,9 @@ section .title-head {
       padding-top: 12px;
       font-size: 12px; }
       div.contact-info div.round-radio label[for] + div.check {
-        top: -44px; } }
+        top: -44px; }
+  div.contact-info div.round-radio:not(:last-of-type) {
+    margin-bottom: 10px; } }
 .both-clear {
   clear: both; }
 
