@@ -169,6 +169,7 @@ section {
     color: #888;
     font-size: 22px;
     font-weight: bold;
+    margin-bottom: 0;
   }
   .name-register {
     width: 100%;
@@ -235,10 +236,10 @@ section {
         label {
           padding: 0;
           padding-top: 12px;
-          padding-left: 52px;
+          padding-left: 44px;
           font-size: 12px;
           & + div.check {
-            top: -28px;
+            top: -23px;
           }
         }
       }
@@ -251,6 +252,7 @@ section {
         height: 40px;
         & + span {
           background-size: 24px;
+          border: 3px solid #ded3c2;
         }
       }
     }
@@ -326,10 +328,15 @@ section {
     height: 78px;
     @extend .bor-gray;
     font-size: 34px;
+    float: left;
   }
   span {
     display: inline-block;
     margin: 0 2.5%;
+    float: left;
+    margin-top: 29px;
+    font-size: 20px;
+    color: #836442;
   }
   button {
     width: 28.57%;
@@ -368,12 +375,13 @@ section {
         font-size: 12px;
         padding-top: 12px;
         & + div.check {
-          top: -48px;
+          top: -44px;
         }
       }
     }
   }
   div.post-code {
+    position: relative;
     input[type="text"] {
       height: 40px;
     }
@@ -382,9 +390,13 @@ section {
       font-size: 12px;
       color: #836442;
       padding: 0;
+      border: 3px solid #e4dbcd;
     }
     p.p-note {
       font-size: 12px;
+    }
+    span {
+      margin-top: 8px;
     }
   }
   div.contact-info {
@@ -394,7 +406,7 @@ section {
         padding-top: 12px;
         font-size: 12px;
         & + div.check {
-          top: -48px;
+          top: -44px;
         }
       }
     }
@@ -471,16 +483,16 @@ section {
         padding-right: 60px;
         font-size: 12px;
         & + div.tick-checkbox {
-          width: 20px;
-          height: 20px;
+          width: 15px;
+          height: 15px;
           border-radius: 4px;
-          top: -36px;
+          top: -34px;
         }
       }
       input[type="checkbox"] {
         &:checked {
           & ~ div.tick-checkbox{
-            background-size: 86%;
+            background-size: 76%;
           };
         };
       }
@@ -514,7 +526,7 @@ section {
 .suite-guide-info {
   margin-top: 32px;
   p.title-p {
-    margin-bottom: 18px;
+    margin-bottom: 8px;
   }
   .round-checkbox {
     width: 100%;
@@ -551,8 +563,8 @@ section {
         padding-bottom: 12px;
         padding-left: 38px;
         + div.check {
-          left: 4px;
-          top: -40px;
+          left: 13px;
+          top: -34px;
         }
       }
     }
@@ -560,8 +572,12 @@ section {
   section div.btn-register {
     button {
       height: 45px;
-      font-size: 16px;
+      font-size: 13px;
+      border: 2px solid red;
     }
+  }
+  section .btn-register button:last-of-type {
+    margin-bottom: 23px;
   }
   footer div.bottom-footer {
     .row-href {
@@ -575,14 +591,22 @@ section {
       };
     }
   }
+  section .btn-register button:first-of-type {
+    border: 3px solid #e4dbce;
+  }
+  section .btn-register button:last-of-type {
+    border: 3px solid #b3d865;
+  }
   footer div.bottom-footer div.btn-register-top {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     button {
       font-size: 12px;
+      height: 30px;
     }
     span {
       text-align: center;
+      margin-top: 16px;
     }
   }
   footer.wrap-container > p {
@@ -595,7 +619,7 @@ section {
       width: 65px;
       background-position: 15px 15px;
       span {
-        font-size: 11px;
+        font-size: 10px;
         right: 5px; 
         top: 40px;
       }
@@ -617,6 +641,9 @@ section {
   }
   .birth-day input[type="text"] {
     font-size: 15px;
+  }
+  .receive-mail-info div.round-radio-short label[for] {
+    font-size: 12px;
   }
 }
 .btn-register {
@@ -695,7 +722,7 @@ footer {
         margin: 0 auto;
         margin-top: 26px;
         padding-bottom: 18px;
-        font-size: 16px;
+        font-size: 8px;
         color: #916a41;
       }
     }
@@ -733,8 +760,8 @@ div.green-radio {
     display: block;
     position: relative;
     border: 2px solid #ddd;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     top: -56px;
     left: 14px;
@@ -745,7 +772,7 @@ div.green-radio {
     & + label {
       display: block;
       padding: 22px 0;
-      padding-left: 52px;
+      padding-left: 42px;
       color: #777;
       font-size: 24px;
       letter-spacing: -1px;
@@ -759,12 +786,12 @@ div.green-radio {
       &:before{
         content: '';
         position: absolute;
-        width: 14px;
-        height: 14px;
+        width: 8px;
+        height: 8px;
         background-color: #8ec21f;
         border-radius: 50%;
-        top: 3px;
-        right: 3px;
+        top: 2px;
+        right: 2px;
       };
     };
   }
@@ -774,7 +801,7 @@ div.green-radio {
     display: none;
     & + label {
       padding: 24px 0;
-      padding-left: 64px;
+      padding-left: 48px;
       color: #777;
       font-size: 24px;
       font-weight: normal;
