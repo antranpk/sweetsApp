@@ -454,7 +454,7 @@ section {
       height: 40px;
     }
     div.add-info-row {
-      margin-top: 20px;
+      margin-top: 16px;
       input[type="text"] {
         height: 40px;
       }
@@ -534,7 +534,7 @@ section {
     @extend .bor-gray;
   }
   div.round-checkbox:not(:last-of-type) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 .receive-mail-info {
@@ -593,6 +593,7 @@ section {
   }
   section .btn-register button:first-of-type {
     border: 3px solid #e4dbce;
+    margin-bottom: 10px;
   }
   section .btn-register button:last-of-type {
     border: 3px solid #b3d865;
