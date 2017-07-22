@@ -33,11 +33,16 @@ header {
           background: url("../image/login.png") no-repeat;
           padding: 17px 17px; }
 
-@media screen and (max-width: 632px) and (min-width: 541px) {
+@media screen and (min-width: 541px) {
   .nickname-class div.round-radio label[for="name2"] {
     padding-top: 8px; }
     .nickname-class div.round-radio label[for="name2"] + div.check {
       top: -80px; } }
+@media screen and (min-width: 653px) {
+  .nickname-class div.round-radio label[for="name2"] {
+    padding-top: 20px; }
+    .nickname-class div.round-radio label[for="name2"] + div.check {
+      top: -60px; } }
 @media screen and (max-width: 599px) and (min-width: 320px) {
   header div.right-header {
     margin-top: 24px;
@@ -201,7 +206,8 @@ section .title-head {
     height: 40px; }
     div.info-detail div.birth-day input[type="text"] + span {
       background-size: 24px;
-      border: 3px solid #ded3c2; }
+      border: 3px solid #ded3c2;
+      width: 60px; }
 
   .gender-info div.green-radio input[type="radio"] + label {
     padding-left: 44px; }
