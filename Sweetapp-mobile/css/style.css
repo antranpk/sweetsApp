@@ -58,10 +58,13 @@ header {
     background-size: 50%; }
   section.wrap-container a.back-href {
     font-size: 16px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    width: 50px; }
     section.wrap-container a.back-href + h1 {
       font-size: 16px;
-      margin-top: 22px; }
+      margin-top: 22px;
+      margin-left: 36.33333%;
+      width: 38%; }
   section.wrap-container div.title-head {
     height: 54px; }
     section.wrap-container div.title-head h1 {
@@ -73,8 +76,9 @@ header {
       font-size: 12px;
       margin-top: 14px; }
       section.wrap-container div.title-head button.pancil span {
-        margin-left: 4px;
-        margin-top: 2px; } }
+        margin-left: 3px;
+        margin-top: 3px;
+        background-position: 6px; } }
 .clear-both {
   clear: both; }
 
@@ -696,5 +700,15 @@ input[type="radio"] + label:hover, input[type="checkbox"] + label:hover {
 
   footer .bottom-footer .btn-register-top span {
     font-size: 16px; } }
+@media screen and (min-width: 520px) and (max-width: 639px) {
+  header div.right-header {
+    margin-top: 30px; }
+    header div.right-header ul.epark-right-menu {
+      padding-left: 0;
+      margin-right: 20px; }
+      header div.right-header ul.epark-right-menu button {
+        background-size: 100% 100%; }
+      header div.right-header ul.epark-right-menu li:first-child {
+        margin-right: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

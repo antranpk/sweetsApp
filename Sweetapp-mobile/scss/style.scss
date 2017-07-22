@@ -87,8 +87,11 @@ header {
     a.back-href {
       font-size: 16px;
       margin-top: 20px;
+      width: 50px;
       & + h1 {
         font-size: 16px;margin-top: 22px;
+        margin-left: 36.33333%;
+        width: 38%;
       }
     }
     div.title-head {
@@ -103,8 +106,9 @@ header {
         font-size: 12px;
         margin-top: 14px;
         span {
-          margin-left: 4px;
-          margin-top: 2px;
+          margin-left: 3px;
+          margin-top: 3px;
+          background-position: 6px;
         }
       }
     }
@@ -917,5 +921,20 @@ input[type="radio"], input[type="checkbox"] {
   }
   footer .bottom-footer .btn-register-top span {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 520px) and (max-width: 639px) {
+  header div.right-header {
+    margin-top: 30px;
+    ul.epark-right-menu {
+      padding-left: 0;
+      margin-right: 20px;
+      button {
+        background-size: 100% 100%;
+      }
+      li:first-child {
+        margin-right: 10px;
+      }
+    }
   }
 }
