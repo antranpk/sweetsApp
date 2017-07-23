@@ -66,7 +66,7 @@ header {
       margin-left: 36.33333%;
       width: 38%; }
   section.wrap-container div.title-head {
-    height: 54px; }
+    height: 50px; }
     section.wrap-container div.title-head h1 {
       font-size: 15px;
       margin-top: 21px; }
@@ -107,8 +107,8 @@ section .back-href {
     color: #333; }
 section .title-head {
   height: 74px;
-  border-top: 4px solid #916a41;
-  border-bottom: 4px solid #916a41; }
+  border-top: 2px solid #916a41;
+  border-bottom: 2px solid #916a41; }
   section .title-head h1 {
     font-size: 30px;
     margin-top: 24px;
