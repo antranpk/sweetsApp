@@ -33,17 +33,7 @@ header {
           background: url("../image/login.png") no-repeat;
           padding: 17px 17px; }
 
-@media screen and (min-width: 541px) {
-  .nickname-class div.round-radio label[for="name2"] {
-    padding-top: 8px; }
-    .nickname-class div.round-radio label[for="name2"] + div.check {
-      top: -80px; } }
-@media screen and (min-width: 653px) {
-  .nickname-class div.round-radio label[for="name2"] {
-    padding-top: 20px; }
-    .nickname-class div.round-radio label[for="name2"] + div.check {
-      top: -60px; } }
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   header div.right-header {
     margin-top: 24px;
     margin-right: 0px; }
@@ -78,9 +68,11 @@ header {
       font-size: 12px;
       margin-top: 14px; }
       section.wrap-container div.title-head button.pancil span {
-        background-position: 12px 4px;
-        background-size: 16%;
-        padding: 4px; } }
+        background-position: 14px 4px;
+        background-size: 20%;
+        padding-top: 3px;
+        padding-left: 22px;
+        width: 64px; } }
 .clear-both {
   clear: both; }
 
@@ -119,7 +111,6 @@ section .title-head {
   section .title-head button.pancil {
     float: right;
     margin-top: 22px;
-    margin-bottom: 8px;
     width: 86px;
     height: 38px;
     border: none;
@@ -131,9 +122,12 @@ section .title-head {
     padding: 0; }
     section .title-head button.pancil span {
       background: url("../image/pencil.png") left no-repeat;
-      display: inline-block;
+      display: block;
       width: 86px;
-      height: 18px; }
+      padding-top: 4px;
+      padding-left: 27px;
+      background-position: 15px 6px;
+      background-size: 20%; }
 
 .bor-gray, .info-detail .round-radio, .info-detail .round-radio-short, .info-detail .name-register .head-name-register .detail-name input, .nickname-class input[type="text"], .birth-day input[type="text"], .post-code input[type="text"], .address-info input[type="text"], .address-info select, .phone-info input[type="text"], .suite-guide-info .round-checkbox {
   border: 1px solid #a8a8a8;
@@ -183,7 +177,7 @@ section .title-head {
           font-size: 34px;
           color: #555; }
 
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   div.info-detail div.name-register input[type="text"].input-name {
     height: 40px;
     margin-bottom: 10px; }
@@ -246,7 +240,7 @@ section .title-head {
     margin-right: 26px; }
     .birth-day input[type="text"] ~ span.input-group-addon {
       background-color: #f3efe9;
-      width: 21.25%;
+      width: 120px;
       border: 5px solid #ded3c2;
       border-radius: 5px;
       background: url("../image/calendar.png") no-repeat center; }
@@ -298,7 +292,7 @@ section .title-head {
     color: #916a41;
     font-size: 22px; }
 
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   section div.info-detail div.name-register {
     margin-top: 9px; }
     section div.info-detail div.name-register p {
@@ -369,7 +363,7 @@ section .title-head {
     background: url("../image/arrow.png") no-repeat;
     background-position: 94% 50%; }
 
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   .address-info label {
     font-size: 12px;
     width: 24%; }
@@ -405,7 +399,7 @@ section .title-head {
         top: -34px; }
     div.suite-guide-info div.round-checkbox input[type="checkbox"]:checked ~ div.tick-checkbox {
       background-size: 76%; } }
-@media screen and (max-width: 365px) and (min-width: 320px) {
+@media screen and (max-width: 365px) {
   div.info-detail div.nickname-class div.round-radio:last-of-type label {
     padding-top: 3px; }
     div.info-detail div.nickname-class div.round-radio:last-of-type label + div.check {
@@ -445,7 +439,7 @@ section .title-head {
     .receive-mail-info div.round-radio-short:last-of-type {
       float: right; }
 
-@media screen and (max-width: 599px) and (min-width: 319px) {
+@media screen and (max-width: 599px) {
   .receive-mail-info div.round-radio-short {
     height: 40px; }
     .receive-mail-info div.round-radio-short label[for] {
@@ -500,8 +494,8 @@ section .title-head {
     footer div#to-top div.span-col {
       height: 55px;
       width: 55px;
-      background-position: 12px 9px;
-      background-size: 60%; }
+      background-position: 16px 9px;
+      background-size: 45%; }
       footer div#to-top div.span-col span {
         font-size: 10px;
         right: 1px;
@@ -710,5 +704,10 @@ input[type="radio"] + label:hover, input[type="checkbox"] + label:hover {
         background-size: 100% 100%; }
       header div.right-header ul.epark-right-menu li:first-child {
         margin-right: 10px; } }
+@media screen and (min-width: 600px) and (max-width: 652px) {
+  div.round-radio input[id="name2"] + label {
+    padding-top: 6px; }
+    div.round-radio input[id="name2"] + label + div.check {
+      top: -78px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -43,23 +43,7 @@ header {
     }
   }  
 }
-@media screen and (min-width: 541px) {
-  .nickname-class div.round-radio label[for="name2"] {
-    padding-top: 8px;
-    & + div.check {
-      top: -80px;
-    }
-  }
-} 
-@media screen and (min-width: 653px) {
-  .nickname-class div.round-radio label[for="name2"] {
-    padding-top: 20px;
-    & + div.check {
-      top: -60px;
-    }
-  }
-}
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   header {
     div.right-header {
       margin-top: 24px;
@@ -108,9 +92,11 @@ header {
         font-size: 12px;
         margin-top: 14px;
         span {
-          background-position: 12px 4px;
-          background-size: 16%;
-          padding: 4px;
+          background-position: 14px 4px;
+          background-size: 20%;
+          padding-top: 3px;
+          padding-left: 22px;
+          width: 64px;
         }
       }
     }
@@ -159,7 +145,6 @@ section {
     button.pancil {
       float: right;
       margin-top: 22px;
-      margin-bottom: 8px;
       width: 86px;
       height: 38px;
       border: none;
@@ -171,9 +156,12 @@ section {
       padding: 0;
       span {
         background: url('../image/pencil.png') left no-repeat;
-        display: inline-block;
+        display: block;
         width: 86px;
-        height: 18px;
+        padding-top: 4px;
+        padding-left: 27px;
+        background-position: 15px 6px;
+        background-size: 20%;
       }
     }
   }
@@ -243,7 +231,7 @@ section {
     }
   }
 }
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   div.info-detail {
     div.name-register {
       input[type="text"].input-name {
@@ -290,7 +278,6 @@ section {
           width: 60px;
         }
       }
-
     }
   }
   .gender-info div.green-radio input[type="radio"] + label {
@@ -334,7 +321,7 @@ section {
     margin-right: 26px;
     & ~ span.input-group-addon {
       background-color: #f3efe9;
-      width: 21.25%;
+      width: 120px;
       border: 5px solid #ded3c2;
       border-radius: 5px;
       background: url("../image/calendar.png") no-repeat center;
@@ -401,7 +388,7 @@ section {
     font-size: 22px;
   }
 }
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   section div.info-detail {
     div.name-register {
       margin-top: 9px;
@@ -448,7 +435,6 @@ section {
       margin-top: 8px;
     }
   }
-
   div.contact-info {
     div.round-radio {
       height: 40px;
@@ -497,7 +483,7 @@ section {
     background-position: 94% 50%;
   }
 }
-@media screen and (max-width: 599px) and (min-width: 320px) {
+@media screen and (max-width: 599px) {
   .address-info {
     label {
       font-size: 12px;
@@ -553,7 +539,7 @@ section {
     }
   }
 }
-@media screen and (max-width: 365px) and (min-width: 320px) {
+@media screen and (max-width: 365px) {
   div.info-detail div.nickname-class div.round-radio:last-of-type label {
     padding-top: 3px;
     & + div.check {
@@ -607,7 +593,7 @@ section {
     };
   }
 }
-@media screen and (max-width: 599px) and (min-width: 319px) {
+@media screen and (max-width: 599px) {
   .receive-mail-info {
     div.round-radio-short {
       height: 40px;
@@ -675,8 +661,8 @@ section {
     div.span-col {
       height: 55px;
       width: 55px;
-      background-position: 12px 9px;
-      background-size: 60%;
+      background-position: 16px 9px;
+      background-size: 45%;
       span {
         font-size: 10px;
         right: 1px; 
@@ -732,7 +718,6 @@ section {
       color: #627e28;
       margin-bottom: 46px;
     };
-    
   }
 }
 footer {
@@ -762,7 +747,6 @@ footer {
           border-right: 1px solid #916a41;
         };
       }
-
       &:first-of-type{
         margin-top: 50px;
         margin-bottom: 24px;
@@ -817,8 +801,6 @@ footer {
         font-weight: bold;
       }
     }
-    
-    
   }
 }
 @media screen and (max-width: 365px) and (min-width: 349px) {
@@ -935,6 +917,14 @@ input[type="radio"], input[type="checkbox"] {
       li:first-child {
         margin-right: 10px;
       }
+    }
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 652px) {
+  div.round-radio input[id="name2"] + label {
+    padding-top: 6px;
+    & + div.check {
+      top: -78px;
     }
   }
 }
