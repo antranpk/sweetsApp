@@ -375,7 +375,7 @@ section .title-head {
     width: 24%; }
   .address-info select {
     height: 40px;
-    background-size: 6%; }
+    background-size: 15px; }
   .address-info div.add-info-row {
     margin-top: 16px; }
     .address-info div.add-info-row input[type="text"] {
