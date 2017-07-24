@@ -95,7 +95,9 @@ header {
       }
     }
     div.title-head {
-      height: 54px;
+      border-top: 2px solid #916a41;
+      border-bottom: 2px solid #916a41;
+      height: 50px;
       h1 {
         font-size: 15px;
         margin-top: 21px;
@@ -106,9 +108,9 @@ header {
         font-size: 12px;
         margin-top: 14px;
         span {
-          margin-left: 3px;
-          margin-top: 3px;
-          background-position: 6px;
+          background-position: 12px 4px;
+          background-size: 16%;
+          padding: 4px;
         }
       }
     }
@@ -172,8 +174,6 @@ section {
         display: inline-block;
         width: 86px;
         height: 18px;
-        margin-top: 4px;
-        margin-left: 10px; 
       }
     }
   }

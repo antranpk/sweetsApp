@@ -66,7 +66,9 @@ header {
       margin-left: 36.33333%;
       width: 38%; }
   section.wrap-container div.title-head {
-    height: 54px; }
+    border-top: 2px solid #916a41;
+    border-bottom: 2px solid #916a41;
+    height: 50px; }
     section.wrap-container div.title-head h1 {
       font-size: 15px;
       margin-top: 21px; }
@@ -76,9 +78,9 @@ header {
       font-size: 12px;
       margin-top: 14px; }
       section.wrap-container div.title-head button.pancil span {
-        margin-left: 3px;
-        margin-top: 3px;
-        background-position: 6px; } }
+        background-position: 12px 4px;
+        background-size: 16%;
+        padding: 4px; } }
 .clear-both {
   clear: both; }
 
@@ -131,9 +133,7 @@ section .title-head {
       background: url("../image/pencil.png") left no-repeat;
       display: inline-block;
       width: 86px;
-      height: 18px;
-      margin-top: 4px;
-      margin-left: 10px; }
+      height: 18px; }
 
 .bor-gray, .info-detail .round-radio, .info-detail .round-radio-short, .info-detail .name-register .head-name-register .detail-name input, .nickname-class input[type="text"], .birth-day input[type="text"], .post-code input[type="text"], .address-info input[type="text"], .address-info select, .phone-info input[type="text"], .suite-guide-info .round-checkbox {
   border: 1px solid #a8a8a8;
