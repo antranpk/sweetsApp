@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location</title>
+  <link rel="shortcut icon" href="image/title.png">
+  <meta charset="utf-8">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-header-left">
+            <span>location</span><span>find</span>
+          </div>
+          <div class="col-md-4 col-md-offset-14 col-header-right">
+            <button></button>
+            <span>Our Network</span>
+          </div>
+        </div>
+      </div>  
+    </header>
+    <div class="google-map">
+      <nav>
+        <div class="container wrap-nav">
+          <div class="row row-nav">
+            <div class="col-md-15 col-sm-16 nav-left">
+              <ul>
+                <li class="find-location"><a href="#">Find Locations</a></li>
+                <li><a href="#">Our Species</a></li>
+                <li><a href="#">Shop</a></li>
+                <div class="clear"></div>
+              </ul>
+            </div>
+            <div class="col-md-9 col-sm-8 nav-right">
+              <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">My Account</a></li>
+                <div class="clear"></div>
+              </ul>
+            </div>
+          </div>
+          <div class="row hide-menu">
+            <div class="col-md-16">
+              <div class="menu-hide">
+                <ul>
+                  <li><a href="#">Find a Location</a></li>
+                  <li><a href="#">Add a Location</a></li>
+                  <li><a href="#">Review a Location</a></li>
+                  <li><a href="">Review a Location</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+              <div class="right-hide-menu">
+              <button class="register"><a href="#">Register</a></button>
+              <a href="#">Login Here or</a>
+              </div>
+            </div>       
+          </div>
+        </div>
+      </nav>
+      <div id="googleMap"></div>
+      <div class="clear"></div>
+      <div class="container search-location">
+        <div class="row">
+          <div class="col-md-14 left-search-location">
+            <ul>
+              <li><a href="#">Drop pin onto the location on map</a></li>
+              <li><a href="#">Add a Species found at location</a></li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="col-md-10 right-search-location">
+            <div class="right-col-float">
+              <button id="btnPrompt"><a href="#">Add Location</a></button>
+              <select class="selectpicker" class="search-location-form">
+                <option>Select Fish</option>
+                <option>Select Fish</option>
+                <option>Select Fish</option>
+              </select>
+
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="prompt">
+      <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
+      <p>Enter your location want to go..</p>
+        <input type="text" name="maps_address" id="locationTextField" placeholder="Search Location" value="">
+    </div>
+    <section>
+      <div class="container">
+        <div class="left-option">
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="wrap-main-contain">
+          <div class="main-contain">
+            <div class="location-added">
+              <h3>Locations you’ve Add</h3>
+              <p>Lets get some dunny no worries come a bloke. Stands out like a sickie.</p>
+              <div class="location-info">
+                <div class="location-detail">
+                  <div class="row">
+                    <div class="col-md-7 name-location">
+                      <p>Blaz’s wickaed ass fishing spot..</p>
+                    </div>
+                    <div class="col-md-7 address-location col-md-offset-1">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-6 see-map col-md-offset-2">
+                      <p>See Location</p><span><i>01</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-detail">
+                  <div class="row">
+                    <div class="col-md-7 name-location">
+                      <p>Blaz’s wickaed ass fishing spot..</p>
+                    </div>
+                    <div class="col-md-7 address-location col-md-offset-1">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 see-map">
+                      <p>See Location</p><span><i>13</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-detail">
+                  <div class="row">
+                    <div class="col-md-7 name-location">
+                      <p>Blaz’s wickaed ass fishing spot..</p>
+                    </div>
+                    <div class="col-md-7 address-location col-md-offset-1">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 see-map">
+                      <p>See Location</p><span><i>13</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-detail">
+                  <div class="row">
+                    <div class="col-md-7 name-location">
+                      <p>Blaz’s wickaed ass fishing spot..</p>
+                    </div>
+                    <div class="col-md-7 address-location col-md-offset-1">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 see-map">
+                      <p>See Location</p><span><i>12</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-detail">
+                  <div class="row">
+                    <div class="col-md-7 name-location">
+                      <p>Blaz’s wickaed ass fishing spot..</p>
+                    </div>
+                    <div class="col-md-7 address-location col-md-offset-1">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 see-map">
+                      <p>See Location</p><span><i>06</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-detail">
+                  <div class="row">
+                    <div class="col-md-7 name-location">
+                      <p>Blaz’s wickaed ass fishing spot..</p>
+                    </div>
+                    <div class="col-md-7 address-location col-md-offset-1">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 see-map">
+                      <p>See Location</p><span><i>08</i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="liner"></div>
+            <div class="recent-location">
+              <h3 class="head-title">Recent locations you’ve rated</h3>
+              <p>Lets get some dunny no worries come a bloke. Stands out like a </p>
+              <div class="recent-location-info">
+                <div class="detail-recent-info">
+                  <div class="row">
+                    <div class="col-md-7 name-recent">
+                      <p>Aire River</p>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 address-recent">
+                      <p>Mullet, Australian Salmon,</p>
+                    </div>
+                    <div class="col-md-4 star-rate">
+                      <p><span></span><span></span><span></span><span></span><span></span></p>
+                    </div>
+                    <div class="col-md-5 view-location">
+                      <a href="#">View Location on Map</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-recent-info">
+                  <div class="row">
+                    <div class="col-md-7 name-recent">
+                      <p>Ball Bag River</p>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 address-recent">
+                      <p>Australian Salmon, Mullet</p>
+                    </div>
+                    <div class="col-md-4 star-rate">
+                      <p><span></span><span></span><span></span><span></span><span></span></p>
+                    </div>
+                    <div class="col-md-5 view-location">
+                      <a href="#">View Location on Map</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-recent-info">
+                  <div class="row">
+                    <div class="col-md-7 name-recent">
+                      <p>Aireys Inlet - Eagle Rock</p>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 address-recent">
+                      <p>Beach east side of Aire River...</p>
+                    </div>
+                    <div class="col-md-4 star-rate">
+                      <p><span></span><span></span><span></span><span></span><span></span></p>
+                    </div>
+                    <div class="col-md-5 view-location">
+                      <a href="#">View Location on Map</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-recent-info">
+                  <div class="row">
+                    <div class="col-md-7 name-recent">
+                      <p>Ball Bag River</p>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 address-recent">
+                      <p>Australian Salmon, Mullet, Trevally,</p>
+                    </div>
+                    <div class="col-md-4 star-rate">
+                      <p><span></span><span></span><span></span><span></span><span></span></p>
+                    </div>
+                    <div class="col-md-5 view-location">
+                      <a href="#">View Location on Map</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-recent-info">
+                  <div class="row">
+                    <div class="col-md-7 name-recent">
+                      <p>Aireys Inlet - Eagle Rock</p>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 address-recent">
+                      <p>Beach east side of Aire River...</p>
+                    </div>
+                    <div class="col-md-4 star-rate">
+                      <p><span></span><span></span><span></span><span></span><span></span></p>
+                    </div>
+                    <div class="col-md-5 view-location">
+                      <a href="#">View Location on Map</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+        <div class="clear"></div>        
+      </div>
+    </section>
+    <footer>
+      <div class="container wrap-footer">
+        <div class="row ">
+          <div class="col-md-4">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Who started it</a></li>
+              <li><a href="#">How to help</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li><a href="#">Account Information</a></li>
+              <li><a href="#">How to login</a></li>
+              <li><a href="#">Create an account</a></li>
+              <li><a href="#">Logout</a></li>
+              <li><a href="#">Join us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Who started it</a></li>
+              <li><a href="#">How to help</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li><a href="#">Account Information</a></li>
+              <li><a href="#">How to login</a></li>
+              <li><a href="#">Create an account</a></li>
+              <li><a href="#">Logout</a></li>
+              <li><a href="#">Join us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-md-offset-3 right-footer">
+            <span><a href="#">Our Network</a></span>
+            <button></button>
+          </div>
+        </div>
+        <div class="row row-bootom-footer">
+          <p>
+            We've made some small changes to BlazRobar.com. To keep the quality We've made some small changes to BlazRobar.com. To keep the qua We've made some small changes to BlazRobar.com. To keep the qua We've made some small changes to BlazRobar.com. To keep the quality. Don't worry though, it's all still free.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDouKesz1lnPKqAOnmhGsy0fkG4wKS47_A&libraries=places&callback=initMap"></script>
+</body>
+</html>
